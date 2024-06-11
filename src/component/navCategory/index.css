@@ -1,0 +1,15 @@
+.NavCategoryContainner{
+    display: flex;
+    width: 490px;
+    justify-content: space-between;
+    padding: 4px;
+    cursor: pointer;
+}
+.NavCategoryContainner ,.Nonselected {
+    font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+.selected{
+color: #FC8A06;
+}

@@ -1,0 +1,12 @@
+.BannerComponent{
+    min-width: 280px;
+    max-width: 280px;
+    border-radius: 7px;
+    height: 150px;
+}
+.BannerComponent img{
+    width: 100%;
+    height: 100%;
+    object-position:top bottom center;
+    
+}

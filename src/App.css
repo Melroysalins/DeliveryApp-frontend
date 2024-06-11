@@ -1,38 +1,30 @@
-.App {
-  text-align: center;
+.App{
+    display: flex;
+    flex-direction: column;
+}
+.Content{
+  padding-top: 75px;
+    width: 100%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid red;
+    justify-content: center;
+    align-items: center;
+}
+/* For Chrome, Safari, and other WebKit browsers */
+::-webkit-scrollbar {
+  width: 0px;  /* Remove scrollbar space */
+  background: transparent;  /* Optional: just make scrollbar invisible */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* For Firefox */
+* {
+  scrollbar-width: none;  /* Hide scrollbar */
+  -ms-overflow-style: none;  /* For Internet Explorer 10+ */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* For Internet Explorer and Edge */
+* {
+  -ms-overflow-style: none;  /* Hide scrollbar */
 }

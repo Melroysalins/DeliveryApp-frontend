@@ -1,0 +1,37 @@
+.UserLocationContainner{
+    display: flex;
+    width: 240px;
+    align-items: center;
+    font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  gap: 7px;
+}
+.UserLocationContainner p:hover{
+    color: #FC8A06;
+    cursor: pointer;
+}
+.UserLocationContainner input{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    padding: 2px;
+    font-size: 13px;
+    border-bottom: 1px solid #ccc;
+     font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  outline: none;
+  opacity: 0.7;
+}
+.dropdownIcon{
+    cursor: pointer;
+      color: #FC8A06;
+}
+.LoginList{
+    cursor: pointer;
+     font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 18px;
+}

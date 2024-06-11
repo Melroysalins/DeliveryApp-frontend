@@ -1,0 +1,24 @@
+.NavBarContainner{
+    display: flex;
+    width: 100%;
+    padding: 8px;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    max-width: 1200px;
+    min-width: 1200px;
+   
+}
+.NavBar{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+      height: 70px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+     z-index: 1000;
+     background-color: white;
+}
