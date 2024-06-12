@@ -1,0 +1,138 @@
+.RestaurantCardContainner{
+    text-decoration: none;
+    color: inherit;
+    outline: 0px;
+    cursor: pointer;
+    display: block;
+    width: 18rem;
+    height: auto;
+}
+.RestaurantCard{
+        display: grid;
+    transition: all 0.05s ease 0s;
+    cursor: pointer;
+    gap: 12px;
+    grid-auto-flow: row;
+    justify-content: stretch;
+    -webkit-box-align: center;
+    align-items: center;
+    padding: 0px;
+}
+.RestaurantImageContainner{
+    position: relative;
+    width: 100%;
+    height: 182px;
+    border-radius: 16px;
+    overflow: hidden;
+    filter: drop-shadow(rgba(0, 0, 0, 0.1) 0px 2px 8px);
+}
+.RestaurantImageContainner img{
+     width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.OverLayContainner{
+    width: 100%;
+    height: 100%;
+    color: white;
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    left: 0;
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    right: 0;
+    font-weight: 800;
+    background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.7));
+}
+.OverLayContainner p{
+    position:absolute;
+    bottom: 10px;
+    font-size: 20px;
+}
+.RestaurantInfo{
+    display: flex;
+
+    justify-content: center;
+    width: 100%;
+}
+.RestaurantInfoContainner{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    
+    margin-left: 10px;
+}
+
+@media (max-width : 600px){
+    .RestaurantCardContainner{
+    text-decoration: none;
+    color: inherit;
+    outline: 0px;
+    cursor: pointer;
+    display: block;
+    width: 14rem;
+    height: auto;
+}
+}
+@media (max-width : 480px){
+    .RestaurantCardContainner{
+    text-decoration: none;
+    color: inherit;
+    outline: 0px;
+    cursor: pointer;
+    display: block;
+    width: 12rem;
+    height: auto;
+}
+}
+
+@media (max-width : 400px){
+    .RestaurantCardContainner{
+    text-decoration: none;
+    color: inherit;
+    outline: 0px;
+    cursor: pointer;
+    display: block;
+    width: 11rem;
+    height: auto;
+}
+.OverLayContainner p{
+    position:absolute;
+    bottom: 10px;
+    font-size: 17px;
+}
+.RestaurantImageContainner{
+    position: relative;
+    width: 100%;
+    height: 162px;
+    border-radius: 16px;
+    overflow: hidden;
+    filter: drop-shadow(rgba(0, 0, 0, 0.1) 0px 2px 8px);
+}
+}
+
+@media (max-width : 360px){
+      .RestaurantCardContainner{
+    text-decoration: none;
+    color: inherit;
+    outline: 0px;
+    cursor: pointer;
+    display: block;
+    width: 9rem;
+    height: auto;
+}
+.RestaurantImageContainner{
+    position: relative;
+    width: 100%;
+    height: 140px;
+    border-radius: 16px;
+    overflow: hidden;
+    filter: drop-shadow(rgba(0, 0, 0, 0.1) 0px 2px 8px);
+}
+}

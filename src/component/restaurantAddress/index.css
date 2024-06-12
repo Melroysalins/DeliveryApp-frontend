@@ -1,0 +1,20 @@
+.RestaurantAddress{
+    margin-top: 6px;
+    display: flex;
+    width: 100%;
+}
+.RestaurantAddress p{
+     font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+    font-size: 15px;
+    line-height: 19px;
+    letter-spacing: -0.3px;
+    color: rgba(2, 6, 12, 0.6);
+    overflow: hidden;
+    width: 100%;
+    display: -webkit-box;
+    overflow-wrap: break-word;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}

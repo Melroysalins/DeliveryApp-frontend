@@ -7,3 +7,17 @@
     width: 100%;
     height: 100%;
 }
+@media(max-width : 440px){
+    .LogoContainner{
+    width: 55px;
+    height: 20px;
+    cursor: pointer;
+}
+}
+@media(max-width : 390px){
+    .LogoContainner{
+    width: 45px;
+    height: 20px;
+    cursor: pointer;
+}
+}

@@ -1,6 +1,6 @@
 .BannerComponent{
     min-width: 280px;
-    max-width: 280px;
+    width: 280px;
     border-radius: 7px;
     height: 150px;
 }
@@ -9,4 +9,28 @@
     height: 100%;
     object-position:top bottom center;
     
+}
+
+@media(max-width : 720px){
+    .BannerComponent{
+    min-width: 220px;
+    border-radius: 7px;
+    height: 127px;
+}
+}
+
+@media(max-width : 480px){
+    .BannerComponent{
+    min-width: 180px;
+    border-radius: 7px;
+    height: 105px;
+}
+}
+
+@media(max-width : 380px){
+    .BannerComponent{
+    min-width: 150px;
+    border-radius: 7px;
+    height: 90px;
+}
 }

@@ -35,3 +35,12 @@
   font-style: normal;
   font-size: 18px;
 }
+
+@media(max-width : 430px){
+  .UserLocationContainner{
+    width: 150px;
+  }
+  .UserLocationContainner input{
+    width: 70%;
+  }
+}
