@@ -1,0 +1,6 @@
+.AddressHistoryContainner{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 35px;
+}

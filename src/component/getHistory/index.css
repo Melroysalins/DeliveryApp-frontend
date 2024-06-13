@@ -1,0 +1,14 @@
+.GetHistoryContainner{
+    display: flex;
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 20px;
+     align-items: center;
+    font-family: "Roboto", sans-serif;
+  font-weight: 500;
+    gap: 15px;
+    cursor: pointer;
+}
+.GetHistoryContainner p:hover{
+        color: #FC8A06;
+}

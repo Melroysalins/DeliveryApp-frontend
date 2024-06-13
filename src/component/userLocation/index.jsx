@@ -2,13 +2,18 @@ import React, { useEffect, useState } from "react";
 import "./index.css";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import RightTemporaryDrawer from "../modal";
+import AddressModal from "../addressModal";
+import { useSelector } from "react-redux";
 
 const UserLocation = () => {
   const [isDrawerOpen, setIsDrawerOpen] = React.useState(false);
+  const [open, setOpen] = React.useState(false);
   const [userloggedin, setUserLoggedIn] = useState();
   const [load, setLoad] = useState(false);
 
   const isLoggedIn = JSON.parse(localStorage.getItem("isloggin"));
+
+  const selector = useSelector((store) => store?.user?.userInfo);
 
   const toggleDrawer = (open) => (event) => {
     if (
@@ -21,6 +26,8 @@ const UserLocation = () => {
     setIsDrawerOpen(open);
   };
 
+  const handleOpen = () => setOpen(true);
+
   useEffect(() => {
     setUserLoggedIn(isLoggedIn);
   }, [userloggedin, load]);
@@ -29,8 +36,8 @@ const UserLocation = () => {
     <>
       <div className="UserLocationContainner">
         <p>Other</p>
-        <input type="text" placeholder="Udupi , Manipura" />
-        <ExpandMoreIcon className="dropdownIcon" />
+        <input type="text" placeholder={selector?.village} />
+        <ExpandMoreIcon className="dropdownIcon" onClick={() => handleOpen()} />
       </div>
       {!userloggedin ? (
         <p className="LoginList" onClick={toggleDrawer(true)}>
@@ -54,6 +61,7 @@ const UserLocation = () => {
         setIsDrawerOpen={setIsDrawerOpen}
         setLoad={setLoad}
       />
+      <AddressModal open={open} setOpen={setOpen} />
     </>
   );
 };
