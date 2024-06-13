@@ -51,3 +51,5 @@ export const OfferBannersection = [
       "https://dealroup.com/wp-content/uploads/2020/05/Grocery-Offers-1024x536.jpg",
   },
 ];
+
+export const BaseUrl = "http://localhost:5000/api";

@@ -1,0 +1,68 @@
+.LoginSignUpMessageContainner{
+    display: flex;
+    width: 100%;
+
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+}
+.LoginMessage{
+      font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 29px;
+  cursor: pointer;
+}
+.orMessage{
+      font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-size: 15px;
+}
+.lastMessage{
+     font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  color: #FC8A06;
+}
+.border-Divider{
+    height: 3px;
+    background-color: black;
+    width: 40px;
+}
+
+.LoginFormSection{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin-top: 27px;
+    width: 100%;
+}
+.LoginButton{
+    border: none;
+    background-color: #FC8A06;;
+    color: white;
+      font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-size: 17px;
+  font-weight: 500;
+  margin-top: 15px;
+  width: 94%;
+  padding: 15px;
+  cursor: pointer;
+}
+.LoginButton:hover{
+    opacity: 0.7;
+}
+
+@media(max-width : 400px){
+    .LoginSignUpMessageContainner{
+    display: flex;
+    width: 100%;
+
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+}
