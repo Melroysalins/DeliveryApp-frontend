@@ -1,11 +1,11 @@
 import React from "react";
 import "./index.css";
 
-const RestaurantRating = () => {
+const RestaurantRating = ({ rating }) => {
   return (
     <div className="DeliveryTimeContainner">
       <div className="dot"></div>
-      <p className="time">40min</p>
+      <p className="time">{rating}</p>
     </div>
   );
 };

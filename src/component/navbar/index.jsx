@@ -6,6 +6,8 @@ import UserLocation from "../userLocation";
 import { getUserDetails } from "../../api/getUser";
 import { useDispatch } from "react-redux";
 import { setUserInfo } from "../../store/userSlice";
+import { getRestaurantListBasedonLocation } from "../../api/getRestaurantList";
+import { addRestaurantList } from "../../store/restaurantlistSlice";
 
 const NavBar = () => {
   const [isScreenSmall, setIsScreenSmall] = useState(window.innerWidth <= 930);
@@ -19,11 +21,20 @@ const NavBar = () => {
 
     dispatch(setUserInfo(result?.user?.address[0]));
   };
+  const FetchRestaurantList = async () => {
+    const { state_district } = JSON.parse(localStorage.getItem("useraddress"));
+    const data = await getRestaurantListBasedonLocation({ state_district });
+
+    if (data?.status === 200) {
+      dispatch(addRestaurantList(data?.list));
+    }
+  };
 
   console.log("Navbar rendering...");
 
   useEffect(() => {
     FetchUserDetails();
+    FetchRestaurantList();
     const handleResize = () => {
       setIsScreenSmall(window.innerWidth <= 930);
     };

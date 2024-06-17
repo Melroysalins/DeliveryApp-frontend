@@ -1,13 +1,10 @@
 import React from "react";
 import "./index.css";
 
-const RestaurantAddress = () => {
+const RestaurantAddress = ({ cuisine }) => {
   return (
     <div className="RestaurantAddress">
-      <p>
-        Pizzas, Pastas, Italian, Desserts, BeveragesPizzas, Pastas, Italian,
-        Desserts, Beverages Pizzas, Pastas, Italian, Desserts, Beverages
-      </p>
+      <p>{cuisine}</p>
     </div>
   );
 };

@@ -32,18 +32,8 @@ const UserLocation = () => {
 
   const handleOpen = () => setOpen(true);
 
-  const FetchRestaurantList = async () => {
-    const { state_district } = JSON.parse(localStorage.getItem("useraddress"));
-    const data = await getRestaurantListBasedonLocation({ state_district });
-
-    if (data?.status === 200) {
-      dispatch(addRestaurantList(data?.list));
-    }
-  };
-
   useEffect(() => {
     setUserLoggedIn(isLoggedIn);
-    FetchRestaurantList();
   }, [userloggedin, load]);
 
   return (

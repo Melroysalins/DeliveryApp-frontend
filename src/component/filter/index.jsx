@@ -15,7 +15,6 @@ const Filter = ({ data, setFilterCount, filtercount }) => {
     setFiltername("");
     setFilterCount(filtercount - 1);
   };
-  console.log("Filterss", filtername);
 
   return (
     <div

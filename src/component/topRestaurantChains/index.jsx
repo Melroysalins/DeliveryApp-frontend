@@ -4,6 +4,10 @@ import "./index.css";
 const TopRestaurantChains = ({ data }) => {
   const [isScreenSmall, setIsScreenSmall] = useState(window.innerWidth <= 550);
 
+  const { state_district } = JSON.parse(localStorage.getItem("useraddress"));
+
+  const stringAfterSplit = state_district.split(" ")[0];
+
   useEffect(() => {
     const handleResize = () => {
       setIsScreenSmall(window.innerWidth <= 550);
@@ -22,7 +26,7 @@ const TopRestaurantChains = ({ data }) => {
       }}
     >
       <div className="TopRestaurantChain">
-        <p>{data}</p>
+        <p>{data + " " + stringAfterSplit}</p>
       </div>
     </div>
   );

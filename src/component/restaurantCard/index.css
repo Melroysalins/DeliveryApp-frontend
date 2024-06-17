@@ -52,7 +52,8 @@
 .OverLayContainner p{
     position:absolute;
     bottom: 10px;
-    font-size: 20px;
+    font-size: 24px;
+    font-weight: bold;
 }
 .RestaurantInfo{
     display: flex;
@@ -68,71 +69,11 @@
     
     margin-left: 10px;
 }
-/* 
-@media (max-width : 600px){
-    .RestaurantCardContainner{
-    text-decoration: none;
-    color: inherit;
-    outline: 0px;
-    cursor: pointer;
-    display: block;
-    width: 14rem;
-    height: auto;
-}
-}
-@media (max-width : 480px){
-    .RestaurantCardContainner{
-    text-decoration: none;
-    color: inherit;
-    outline: 0px;
-    cursor: pointer;
-    display: block;
-    width: 12rem;
-    height: auto;
-}
-}
-
-@media (max-width : 400px){
-    .RestaurantCardContainner{
-    text-decoration: none;
-    color: inherit;
-    outline: 0px;
-    cursor: pointer;
-    display: block;
-    width: 11rem;
-    height: auto;
-}
-.OverLayContainner p{
+@media(max-width:780px){
+    .OverLayContainner p{
     position:absolute;
     bottom: 10px;
     font-size: 17px;
-}
-.RestaurantImageContainner{
-    position: relative;
-    width: 100%;
-    height: 162px;
-    border-radius: 16px;
-    overflow: hidden;
-    filter: drop-shadow(rgba(0, 0, 0, 0.1) 0px 2px 8px);
+    font-weight: bold;
 }
 }
-
-@media (max-width : 360px){
-      .RestaurantCardContainner{
-    text-decoration: none;
-    color: inherit;
-    outline: 0px;
-    cursor: pointer;
-    display: block;
-    width: 9rem;
-    height: auto;
-}
-.RestaurantImageContainner{
-    position: relative;
-    width: 100%;
-    height: 140px;
-    border-radius: 16px;
-    overflow: hidden;
-    filter: drop-shadow(rgba(0, 0, 0, 0.1) 0px 2px 8px);
-}
-} */

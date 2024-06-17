@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./index.css";
 import MyLocationIcon from "@mui/icons-material/MyLocation";
 import { getUserCurrentLocation } from "../../api/getLocation";
 import { setUserLocation } from "../../api/setLocation";
 import { useDispatch } from "react-redux";
 import { setUserInfo } from "../../store/userSlice";
+import { getRestaurantListBasedonLocation } from "../../api/getRestaurantList";
+import { addRestaurantList } from "../../store/restaurantlistSlice";
 
 const GetHistory = ({ setOpen }) => {
   const dispatch = useDispatch();
@@ -42,6 +44,17 @@ const GetHistory = ({ setOpen }) => {
                   "useraddress",
                   JSON.stringify(response2?.user?.address[0])
                 );
+                const { state_district } = JSON.parse(
+                  localStorage.getItem("useraddress")
+                );
+                const data = await getRestaurantListBasedonLocation({
+                  state_district,
+                });
+
+                if (data?.status === 200) {
+                  dispatch(addRestaurantList(data?.list));
+                }
+
                 setOpen(false);
               }
             }
@@ -59,6 +72,10 @@ const GetHistory = ({ setOpen }) => {
       console.error("Geolocation is not supported by this browser.");
     }
   };
+
+  useEffect(() => {
+    console.log("dispatch called");
+  }, [dispatch]);
 
   return (
     <div

@@ -1,10 +1,10 @@
 import React from "react";
 import "./index.css";
 
-const RestaurantName = () => {
+const RestaurantName = ({ name }) => {
   return (
     <div className="RestaurantName">
-      <p>Pizza Hut</p>
+      <p>{name}</p>
     </div>
   );
 };
