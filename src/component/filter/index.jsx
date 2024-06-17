@@ -25,6 +25,7 @@ const Filter = ({ data, setFilterCount, filtercount }) => {
       {data?.name}
       {filtername === data?.name ? (
         <CloseIcon
+          sx={{ marginLeft: "6px" }}
           onClick={(event) => handleRemoveSelectedFilter(event, data?.name)}
         />
       ) : (

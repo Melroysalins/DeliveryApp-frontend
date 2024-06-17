@@ -7,16 +7,44 @@ import {
 } from "react-router-dom";
 import HomePage from "./pages/homePage";
 import NavBar from "./component/navbar";
-// import asynhandler from ".../../../../../admindashboard/backend/"
+import { Suspense, lazy } from "react";
 
 function App() {
+  const RestaurantList = lazy(() => import("./pages/restaurantList"));
+  const SpecailOffer = lazy(() => import("./pages/specialOffer"));
+  const TrackOrder = lazy(() => import("./pages/trackOrder"));
+
   return (
     <div className="App">
-      <NavBar />
       <div className="Content">
         <BrowserRouter>
+          <NavBar />
           <Routes>
             <Route path="/" element={<HomePage />} />
+            <Route
+              path="/restaurantlist"
+              element={
+                <Suspense fallback={<div>Loading...</div>}>
+                  <RestaurantList />
+                </Suspense>
+              }
+            />
+            <Route
+              path="/specialoffers"
+              element={
+                <Suspense fallback={<div>Loading...</div>}>
+                  <SpecailOffer />
+                </Suspense>
+              }
+            />
+            <Route
+              path="/trackerorder"
+              element={
+                <Suspense fallback={<div>Loading...</div>}>
+                  <TrackOrder />
+                </Suspense>
+              }
+            />
           </Routes>
         </BrowserRouter>
       </div>

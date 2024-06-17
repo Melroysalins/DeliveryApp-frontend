@@ -4,7 +4,7 @@
     outline: 0px;
     cursor: pointer;
     display: block;
-    width: 18rem;
+    /* width: 18rem; */
     height: auto;
 }
 .RestaurantCard{
@@ -68,7 +68,7 @@
     
     margin-left: 10px;
 }
-
+/* 
 @media (max-width : 600px){
     .RestaurantCardContainner{
     text-decoration: none;
@@ -135,4 +135,4 @@
     overflow: hidden;
     filter: drop-shadow(rgba(0, 0, 0, 0.1) 0px 2px 8px);
 }
-}
+} */

@@ -6,8 +6,6 @@ import RestaurantAddress from "../restaurantAddress";
 import Skeleton from "@mui/material/Skeleton";
 
 const RestaurantCard = () => {
-  const [data, setData] = useState("sjsjjs");
-
   return (
     <div className="RestaurantCardContainner">
       <div className="RestaurantCard">

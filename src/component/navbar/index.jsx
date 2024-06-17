@@ -9,6 +9,7 @@ import { setUserInfo } from "../../store/userSlice";
 
 const NavBar = () => {
   const [isScreenSmall, setIsScreenSmall] = useState(window.innerWidth <= 930);
+  const [activepath, setActivePath] = useState("Home");
   const dispatch = useDispatch();
 
   const FetchUserDetails = async () => {
@@ -18,6 +19,8 @@ const NavBar = () => {
 
     dispatch(setUserInfo(result?.user?.address[0]));
   };
+
+  console.log("Navbar rendering...");
 
   useEffect(() => {
     FetchUserDetails();
@@ -32,8 +35,10 @@ const NavBar = () => {
   return (
     <div className="NavBar">
       <div className="NavBarContainner">
-        <Logo />
-        {!isScreenSmall && <NavCategory />}
+        <Logo setActivePath={setActivePath} />
+        {!isScreenSmall && (
+          <NavCategory activepath={activepath} setActivePath={setActivePath} />
+        )}
         <UserLocation />
       </div>
     </div>

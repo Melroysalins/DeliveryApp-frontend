@@ -7,7 +7,7 @@ export const NavbarCategoryList = [
   {
     id: 102,
     name: "Restaurants",
-    path: "/restaurant",
+    path: "/restaurantlist",
   },
   {
     id: 103,

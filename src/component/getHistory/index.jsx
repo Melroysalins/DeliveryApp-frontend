@@ -8,6 +8,7 @@ import { setUserInfo } from "../../store/userSlice";
 
 const GetHistory = ({ setOpen }) => {
   const dispatch = useDispatch();
+
   const handleFetchCurrenLocation = async () => {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
@@ -33,8 +34,14 @@ const GetHistory = ({ setOpen }) => {
                 _id,
               });
 
-              if (response?.status === 200) {
-                dispatch(setUserInfo(result?.user?.address[0]));
+              const response2 = await response.json();
+
+              if (response2?.status === 200) {
+                dispatch(setUserInfo(response2?.user?.address[0]));
+                localStorage.setItem(
+                  "useraddress",
+                  JSON.stringify(response2?.user?.address[0])
+                );
                 setOpen(false);
               }
             }

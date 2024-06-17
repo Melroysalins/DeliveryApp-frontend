@@ -3,13 +3,17 @@ import "./index.css";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import RightTemporaryDrawer from "../modal";
 import AddressModal from "../addressModal";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { getRestaurantListBasedonLocation } from "../../api/getRestaurantList";
+import { addRestaurantList } from "../../store/restaurantlistSlice";
 
 const UserLocation = () => {
   const [isDrawerOpen, setIsDrawerOpen] = React.useState(false);
   const [open, setOpen] = React.useState(false);
   const [userloggedin, setUserLoggedIn] = useState();
   const [load, setLoad] = useState(false);
+
+  const dispatch = useDispatch();
 
   const isLoggedIn = JSON.parse(localStorage.getItem("isloggin"));
 
@@ -28,15 +32,30 @@ const UserLocation = () => {
 
   const handleOpen = () => setOpen(true);
 
+  const FetchRestaurantList = async () => {
+    const { state_district } = JSON.parse(localStorage.getItem("useraddress"));
+    const data = await getRestaurantListBasedonLocation({ state_district });
+
+    if (data?.status === 200) {
+      dispatch(addRestaurantList(data?.list));
+    }
+  };
+
   useEffect(() => {
     setUserLoggedIn(isLoggedIn);
+    FetchRestaurantList();
   }, [userloggedin, load]);
 
   return (
     <>
       <div className="UserLocationContainner">
         <p>Other</p>
-        <input type="text" placeholder={selector?.village} />
+        <input
+          type="text"
+          placeholder={
+            (selector?.village || "") + ", " + (selector?.state_district || "")
+          }
+        />
         <ExpandMoreIcon className="dropdownIcon" onClick={() => handleOpen()} />
       </div>
       {!userloggedin ? (
