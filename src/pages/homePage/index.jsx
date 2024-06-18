@@ -6,6 +6,7 @@ import TopRestaurantChains from "../../component/topRestaurantChains";
 import RestaurantCard from "../../component/restaurantCard";
 import Filters from "../../component/filters";
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 const HomePage = () => {
   const selector = useSelector((store) => store?.resList?.restaurantList);
@@ -109,7 +110,9 @@ const HomePage = () => {
                     </div>
                   ))
                 : selector?.restaurantlist?.map((list) => (
-                    <RestaurantCard key={list?._id} data={list} />
+                    <Link to={`/restaurant/${list?.storename}`}>
+                      <RestaurantCard key={list?._id} data={list} />
+                    </Link>
                   ))}
             </div>
           </div>

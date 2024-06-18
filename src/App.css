@@ -16,6 +16,11 @@
   width: 0px;  /* Remove scrollbar space */
   background: transparent;  /* Optional: just make scrollbar invisible */
 }
+*{
+  list-style: none;
+  list-style-type: none;
+  text-decoration: none;
+}
 
 /* For Firefox */
 * {

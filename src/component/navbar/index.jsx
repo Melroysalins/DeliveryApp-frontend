@@ -30,8 +30,6 @@ const NavBar = () => {
     }
   };
 
-  console.log("Navbar rendering...");
-
   useEffect(() => {
     FetchUserDetails();
     FetchRestaurantList();

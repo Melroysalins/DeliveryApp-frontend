@@ -5,8 +5,31 @@ import CloseIcon from "@mui/icons-material/Close";
 const Filter = ({ data, setFilterCount, filtercount }) => {
   const [filtername, setFiltername] = useState("");
 
+  const [filterlist, setFilterList] = useState({
+    deliveryTime: false,
+    Veg: false,
+    Nonveg: false,
+    offer: false,
+  });
+
   const handleSelectedFilter = (name) => {
     setFiltername(name);
+
+    let updatedFilterList = { ...filterlist };
+
+    if (name === "Fast Delivery") {
+      updatedFilterList.deliveryTime = !updatedFilterList.deliveryTime;
+    }
+    if (name === "Veg") {
+      updatedFilterList.Veg = !updatedFilterList.Veg;
+    }
+    if (name === "NonVeg") {
+      updatedFilterList.Nonveg = !updatedFilterList.Nonveg;
+    }
+    if (name === "Offer") {
+      updatedFilterList.offer = !updatedFilterList.offer;
+    }
+    setFilterList(updatedFilterList);
     setFilterCount(filtercount + 1);
   };
 
@@ -15,6 +38,10 @@ const Filter = ({ data, setFilterCount, filtercount }) => {
     setFiltername("");
     setFilterCount(filtercount - 1);
   };
+
+  useEffect(() => {
+    console.log("name", filterlist);
+  }, [filterlist]);
 
   return (
     <div

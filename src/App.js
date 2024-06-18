@@ -8,6 +8,7 @@ import {
 import HomePage from "./pages/homePage";
 import NavBar from "./component/navbar";
 import { Suspense, lazy } from "react";
+import RestaurantPage from "./pages/restaurantPage";
 
 function App() {
   const RestaurantList = lazy(() => import("./pages/restaurantList"));
@@ -45,6 +46,7 @@ function App() {
                 </Suspense>
               }
             />
+            <Route path="/restaurant/:name" element={<RestaurantPage />} />
           </Routes>
         </BrowserRouter>
       </div>

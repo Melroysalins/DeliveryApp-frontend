@@ -1,0 +1,24 @@
+.RestaurantPage{
+    display: flex;
+    flex-direction: column;
+    max-width: 1000px;
+    width: 100%;
+    border: 1px solid black;
+    padding: 14px;
+    align-items: flex-start;
+}
+.RestaurantNameSection{
+    display: flex;
+    width: 100%;
+}
+.RestaurantNameSection p{
+    font-family: "Roboto", sans-serif;
+  font-weight:800;
+  font-style: normal;
+  font-size: 24px;
+}
+.RestaurantInfoSection{
+    margin-top: 40px;
+    width: 100%;
+    display: flex;
+}
