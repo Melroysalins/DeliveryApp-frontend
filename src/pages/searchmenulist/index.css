@@ -1,0 +1,36 @@
+.RestaurantMenuSearchContainner{
+    max-width: 800px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+.SearchBoxDivContainner{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    cursor: pointer;
+    gap: 10px;
+    padding: 4px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 3px;
+}
+.SearchBoxDivContainner input{
+    width: 94%;
+    outline: none;
+    border: none;
+    padding: 5px;
+    font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 18px;
+  margin-left: 10px;
+}
+
+.SearchResultDisplayContainner{
+    width: 100%;
+    display: flex;
+    flex-direction:column ;
+    margin-top: 29px;
+    gap: 15px;
+}

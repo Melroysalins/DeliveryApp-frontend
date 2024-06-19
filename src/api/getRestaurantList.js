@@ -32,4 +32,26 @@ const getRestaurantMenu = async ({ _id }) => {
   return result;
 };
 
-export { getRestaurantListBasedonLocation, getRestaurantMenu };
+const searchInResultMenu = async ({ _id, searchvalue }) => {
+  const data = {
+    storeID: _id,
+    name: searchvalue,
+  };
+  const response = await fetch(`${BaseUrl}/user/searchmenu`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(data),
+  });
+
+  const result = await response.json();
+
+  return result;
+};
+
+export {
+  getRestaurantListBasedonLocation,
+  getRestaurantMenu,
+  searchInResultMenu,
+};

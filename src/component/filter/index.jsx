@@ -27,11 +27,6 @@ const Filter = ({ data, setFilterCount, filtercount }) => {
     setFilterCount(filtercount - 1);
   };
 
-  console.log("the list-->", {
-    offer,
-    Veg,
-  });
-
   useEffect(() => {}, [offer, Veg]);
 
   return (

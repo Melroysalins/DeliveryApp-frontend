@@ -9,6 +9,7 @@ import HomePage from "./pages/homePage";
 import NavBar from "./component/navbar";
 import { Suspense, lazy } from "react";
 import RestaurantPage from "./pages/restaurantPage";
+import SearchMenuListPage from "./pages/searchmenulist";
 
 function App() {
   const RestaurantList = lazy(() => import("./pages/restaurantList"));
@@ -47,6 +48,7 @@ function App() {
               }
             />
             <Route path="/restaurant/:_id" element={<RestaurantPage />} />
+            <Route path="/:storename/:_id" element={<SearchMenuListPage />} />
           </Routes>
         </BrowserRouter>
       </div>

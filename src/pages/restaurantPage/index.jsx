@@ -7,7 +7,7 @@ import DealsSection from "../../component/deals";
 import MenuHeader from "../../component/menuHeader";
 import MenuSearch from "../../component/menuSearch";
 import RestaurantProductModal from "../../component/restaurantProductModal";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { getRestaurantMenu } from "../../api/getRestaurantList";
 import {
@@ -42,8 +42,6 @@ const RestaurantPage = () => {
     FetchRestaurantMenu();
   }, [_id]);
 
-  console.log("menulist-->", menuList);
-
   return (
     <>
       {open ? (
@@ -55,7 +53,9 @@ const RestaurantPage = () => {
           </div>
           {deal.length > 1 && <DealsSection deal={deal} />}
           <MenuHeader />
-          <MenuSearch />
+
+          <MenuSearch data={storeinfo} />
+
           <div className="ModalDivider"></div>
 
           <div className="RestaurantProductContainner">

@@ -1,6 +1,7 @@
 .ProductDescription{
     width: 80%;
     margin-top: 20px;
+    display: flex;
 
 }
 .ProductDescription p{
@@ -9,6 +10,7 @@
   font-style: normal;
   opacity: 0.6;
   font-size: 13px;
+  cursor: pointer;
   
 }
 
