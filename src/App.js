@@ -46,7 +46,7 @@ function App() {
                 </Suspense>
               }
             />
-            <Route path="/restaurant/:name" element={<RestaurantPage />} />
+            <Route path="/restaurant/:_id" element={<RestaurantPage />} />
           </Routes>
         </BrowserRouter>
       </div>

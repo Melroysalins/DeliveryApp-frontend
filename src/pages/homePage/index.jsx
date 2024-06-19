@@ -56,13 +56,13 @@ const HomePage = () => {
                       }}
                     >
                       <Skeleton
-                        key={index} // Added key to avoid warning
+                        key={index + "x"} // Added key to avoid warning
                         variant="rectangular"
                         height={200}
                         width={!isScreenSmall ? 290 : 200}
                       />
                       <Skeleton
-                        key={index} // Added key to avoid warning
+                        key={index + "a"} // Added key to avoid warning
                         variant="rectangular"
                         height={10}
                         width={120}
@@ -71,7 +71,10 @@ const HomePage = () => {
                     </div>
                   ))
                 : selector?.toprated?.map((list) => (
-                    <RestaurantCard key={list?._id} data={list} />
+                    <Link to={`/restaurant/${list?._id}`} key={list?._id}>
+                      {" "}
+                      <RestaurantCard data={list} />
+                    </Link>
                   ))}
             </div>{" "}
           </>
@@ -95,13 +98,13 @@ const HomePage = () => {
                       }}
                     >
                       <Skeleton
-                        key={index} // Added key to avoid warning
+                        key={index + "w"} // Added key to avoid warning
                         variant="rectangular"
                         height={200}
                         width={!isScreenSmall ? 290 : 200}
                       />
                       <Skeleton
-                        key={index} // Added key to avoid warning
+                        key={index + "j"} // Added key to avoid warning
                         variant="rectangular"
                         height={10}
                         width={120}
@@ -110,8 +113,8 @@ const HomePage = () => {
                     </div>
                   ))
                 : selector?.restaurantlist?.map((list) => (
-                    <Link to={`/restaurant/${list?.storename}`}>
-                      <RestaurantCard key={list?._id} data={list} />
+                    <Link to={`/restaurant/${list?._id}`}>
+                      <RestaurantCard data={list} />
                     </Link>
                   ))}
             </div>

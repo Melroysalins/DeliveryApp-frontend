@@ -3,6 +3,7 @@ import "./index.css";
 import BasicBreadcrumbs from "../../component/breadCrumbs";
 import TopRestaurantChains from "../../component/topRestaurantChains";
 import RestaurantInfoModal from "../../component/restaurantInfoModal";
+import DealsSection from "../../component/deals";
 
 const RestaurantPage = () => {
   return (
@@ -12,6 +13,7 @@ const RestaurantPage = () => {
       <div className="RestaurantInfoSection">
         <RestaurantInfoModal />
       </div>
+      <DealsSection />
     </div>
   );
 };

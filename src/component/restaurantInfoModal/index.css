@@ -3,6 +3,7 @@
     border: 1px solid rgba(2, 6, 12, 0.15);
     background: white;
     width: 100%;
+    cursor: pointer;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -14,4 +15,49 @@
     border-bottom-left-radius: 36px;
     width: 100%;
     border-bottom-right-radius: 36px;
+}
+.OutLetInfoSection{
+    margin-top: 29px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+     font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+
+}
+.OutLetInfoSection p{
+     font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+.OutLetInfoSection h5{
+    color:  #a2a2a2;
+}
+.ModalDivider{
+    display: flex;
+    width: 100%;
+    height: 2px;
+    margin-top: 30px;
+    background-color: #efeded;
+}
+.CuisineSection{
+    margin-top: 10px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.CusineHeader{
+     font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 13px;
+  color: #363636;
+}
+.CusineName{
+       font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 13px;
+  color: black;
 }
