@@ -1,0 +1,19 @@
+.ProductDescription{
+    width: 80%;
+    margin-top: 20px;
+
+}
+.ProductDescription p{
+    font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  opacity: 0.6;
+  font-size: 13px;
+  
+}
+
+@media(max-width:400px){
+    .ProductDescription p{
+        font-size: 11px;
+    }
+}

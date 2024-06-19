@@ -1,0 +1,36 @@
+.MenuSearchComponent{
+    display: flex;
+    width: 100%;
+    margin-top: 22px;
+    justify-content: center;
+}
+.SearchDisplayContainner{
+        display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    width: 85%;
+    height: 48px;
+    border-radius: 12px;
+    background: rgb(240, 240, 245);
+    -webkit-box-pack: center;
+    justify-content: center;
+   color: rgba(2, 6, 12, 0.6);
+   position: relative;
+   cursor: pointer;
+   font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+.SearchDisplayIcon{
+    position: absolute;
+    color: rgba(2, 6, 12, 0.6);
+    left: 94%;
+}
+
+@media(max-width:410px){
+    .SearchDisplayIcon{
+    position: absolute;
+    color: rgba(2, 6, 12, 0.6);
+    left: 88%;
+}
+}

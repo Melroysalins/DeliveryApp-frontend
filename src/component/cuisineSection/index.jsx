@@ -1,11 +1,11 @@
 import React from "react";
 import OutdoorGrillIcon from "@mui/icons-material/OutdoorGrill";
 
-const CuisineSection = () => {
+const CuisineSection = ({ data }) => {
   return (
     <div className="CuisineSection">
       <OutdoorGrillIcon />
-      <p className="CusineName">North Indian , South , Fast Food</p>
+      <p className="CusineName">{data}</p>
     </div>
   );
 };

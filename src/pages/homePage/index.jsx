@@ -71,7 +71,7 @@ const HomePage = () => {
                     </div>
                   ))
                 : selector?.toprated?.map((list) => (
-                    <Link to={`/restaurant/${list?._id}`} key={list?._id}>
+                    <Link to={`/restaurant/${list?.storeID}`} key={list?._id}>
                       {" "}
                       <RestaurantCard data={list} />
                     </Link>
@@ -113,7 +113,7 @@ const HomePage = () => {
                     </div>
                   ))
                 : selector?.restaurantlist?.map((list) => (
-                    <Link to={`/restaurant/${list?._id}`}>
+                    <Link to={`/restaurant/${list?.storeID}`}>
                       <RestaurantCard data={list} />
                     </Link>
                   ))}

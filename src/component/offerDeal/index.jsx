@@ -2,11 +2,11 @@ import React from "react";
 import "./index.css";
 import generic from "../../assets/generic.png";
 
-const OfferDeal = () => {
+const OfferDeal = ({ offer }) => {
   return (
     <div className="OfferDealMenu">
       <img src={generic} />
-      <p>Up to 60% Off</p>
+      <p>Up to {offer} Off</p>
     </div>
   );
 };

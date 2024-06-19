@@ -1,0 +1,58 @@
+.ProductImageDiv{
+    display: flex;
+    position: relative;
+    width: 210px;
+}
+.ProductImageDiv img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+.AddProductButton{
+  position: absolute;
+  width: 100px;
+  padding: 7px;
+  top: 86%;
+  left: 26%;
+  cursor: pointer;
+  border: none;
+  background-color: white;
+  color: green;
+  font-weight: 600;
+  border-radius: 8px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.AddProductButton:hover{
+    border: none;
+    background-color: rgb(174, 173, 173);
+
+}
+
+@media(max-width:640px){
+    .ProductImageDiv{
+    display: flex;
+    position: relative;
+    width: 180px;
+    height: 180px;
+}
+}
+
+
+@media(max-width:500px){
+    .ProductImageDiv{
+    display: flex;
+    position: relative;
+    width: 160px;
+    height: 160px;
+}
+}
+
+
+@media(max-width:380px){
+    .ProductImageDiv{
+    display: flex;
+    position: relative;
+    width: 138px;
+    height: 138px;
+}
+}

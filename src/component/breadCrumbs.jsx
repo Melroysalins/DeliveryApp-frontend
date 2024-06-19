@@ -8,7 +8,7 @@ function handleClick(event) {
   console.info("You clicked a breadcrumb.");
 }
 
-export default function BasicBreadcrumbs() {
+export default function BasicBreadcrumbs({ name }) {
   return (
     <div role="presentation" onClick={handleClick}>
       <Breadcrumbs
@@ -22,7 +22,7 @@ export default function BasicBreadcrumbs() {
           color="text.primary"
           sx={{ fontSize: "11px", fontFamily: "Roboto" }}
         >
-          Breadcrumbs
+          {name}
         </Typography>
       </Breadcrumbs>
     </div>

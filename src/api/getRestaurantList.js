@@ -18,4 +18,18 @@ const getRestaurantListBasedonLocation = async ({ state_district }) => {
   return result;
 };
 
-export { getRestaurantListBasedonLocation };
+const getRestaurantMenu = async ({ _id }) => {
+  const response = await fetch(`${BaseUrl}/user/getmenulist`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ storeID: _id }),
+  });
+
+  const result = await response.json();
+
+  return result;
+};
+
+export { getRestaurantListBasedonLocation, getRestaurantMenu };
