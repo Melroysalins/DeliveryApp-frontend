@@ -1,0 +1,28 @@
+.SearchResultComponent{
+    display: flex;
+    width: 100%;
+    align-items: center;
+   
+    gap: 15px;
+    cursor: pointer;
+}
+.SearchProductImage{
+    width: 80px;
+    height: 70px;
+    display: flex;
+    padding: 5px;
+
+}
+.SearchProductImage img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.SearchResultComponent p{
+     font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+.SearchResultComponent:hover{
+     background-color: #f2f6fc;;
+}

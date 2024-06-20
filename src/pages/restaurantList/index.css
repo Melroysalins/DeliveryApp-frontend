@@ -1,0 +1,50 @@
+.MainSearchPageContainner{
+    max-width: 900px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+.MainSearchBoxContainner{
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+    padding: 0;
+    background: #fff;
+    height: 48px;
+    overflow: hidden;
+    justify-content: space-between;
+    border: 1px solid rgba(40, 44, 63, .2);
+}
+.MainSearchBoxContainner input{
+    padding: 10px;
+    width: 90%;
+    outline: none;
+    border: none;
+    padding-left: 10px;
+    font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 17px;
+}
+.MainSearchBoxContainner input::placeholder{
+font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 17px;
+
+}
+.SearchIconName{
+    margin-right: 15px;
+    
+}
+
+.SearchListDisplayContainner{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    padding: 3px;
+    gap: 14px;
+}
