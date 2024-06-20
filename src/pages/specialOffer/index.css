@@ -1,0 +1,17 @@
+.SpecialOfferContainner{
+    max-width: 1000px;
+    width: 100%;
+    display: grid;
+    margin-top: 28px;
+    grid-template-columns: repeat(3,1fr);
+    row-gap: 25px;
+    column-gap: 20px;
+
+}
+
+@media(max-width:500px){
+    .SpecialOfferContainner{
+        padding: 10px;
+        grid-template-columns: repeat(2,1fr);
+    }
+}

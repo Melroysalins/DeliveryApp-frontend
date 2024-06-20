@@ -3,7 +3,7 @@ import "./index.css";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import SearchIcon from "@mui/icons-material/Search";
 import CloseIcon from "@mui/icons-material/Close";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { searchInResultMenu } from "../../api/getRestaurantList";
 import ProductInfo from "../../component/productInfo";
 
@@ -13,7 +13,7 @@ const SearchMenuListPage = () => {
 
   const { storename, _id } = useParams();
 
-  console.log("storename", _id);
+  const navigate = useNavigate();
 
   const FetchSearchResult = async () => {
     const result = await searchInResultMenu({ _id, searchvalue });
@@ -38,7 +38,10 @@ const SearchMenuListPage = () => {
   return (
     <div className="RestaurantMenuSearchContainner">
       <div className="SearchBoxDivContainner">
-        <ArrowBackIcon sx={{ color: "#979696;" }} />
+        <ArrowBackIcon
+          sx={{ color: "#979696;" }}
+          onClick={() => navigate(-1)}
+        />
         <input
           type="text"
           placeholder={"Search in " + " " + storename}

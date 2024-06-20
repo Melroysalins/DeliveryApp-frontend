@@ -43,7 +43,7 @@ width: 100%;
     display: grid;
     grid-template-columns: repeat(4,1fr);
     margin-top: 36px;
-    row-gap: 20px;
+    row-gap: 40px;
     column-gap: 15px;
 }
 
