@@ -1,17 +1,18 @@
 import React from "react";
 import "./index.css";
+import { useNavigate } from "react-router-dom";
 
-const SearchResult = () => {
+const SearchResult = ({ data }) => {
+  const navigate = useNavigate();
   return (
-    <div className="SearchResultComponent">
+    <div
+      className="SearchResultComponent"
+      onClick={() => navigate(`/search/food/${data?.productname}`)}
+    >
       <div className="SearchProductImage">
-        <img
-          src={
-            "https://res.cloudinary.com/dwoo3cuau/image/upload/v1718784413/j0njth1ou2f7rokc4v4u.jpg"
-          }
-        />
+        <img src={data?.productimage?.url} />
       </div>
-      <p>Pizza</p>
+      <p>{data?.productname}</p>
     </div>
   );
 };

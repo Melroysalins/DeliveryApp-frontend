@@ -17,7 +17,19 @@ const NavBar = () => {
   const FetchUserDetails = async () => {
     const _id = localStorage.getItem("userid");
 
+    const userAddress = {
+      village: "Dendur",
+      state_district: "Udupi District",
+      state: "Karnataka",
+    };
+
+    if (!_id) {
+      localStorage.setItem("useraddress", JSON.stringify(userAddress));
+    }
+
     const result = await getUserDetails({ _id });
+
+    console.log("user info--->", result);
 
     dispatch(setUserInfo(result?.user?.address[0]));
   };

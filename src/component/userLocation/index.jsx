@@ -43,7 +43,9 @@ const UserLocation = () => {
         <input
           type="text"
           placeholder={
-            (selector?.village || "") + ", " + (selector?.state_district || "")
+            selector?.village || selector?.state_district
+              ? `${selector?.village || ""}, ${selector?.state_district || ""}`
+              : "Udupi"
           }
         />
         <ExpandMoreIcon className="dropdownIcon" onClick={() => handleOpen()} />

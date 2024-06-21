@@ -48,6 +48,31 @@ font-family: "Roboto", sans-serif;
     padding: 3px;
     gap: 14px;
 }
+.ArrowBackIcon{
+    color: rgb(112, 113, 114);
+    cursor: pointer;
+}
+
+.RestauarantInfowithCardContainner{
+   
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    padding: 5px;
+}
+.theGridContainner{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    max-width: 800px;
+    padding: 6px;
+    cursor: pointer;
+    overflow-y: scroll;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    background-color: #f5f6f8;;
+    column-gap: 20px;
+    row-gap: 20px;
+}
 
 @media(max-width:900px){
     .MainSearchPageContainner{
@@ -67,7 +92,7 @@ font-family: "Roboto", sans-serif;
     margin-top: 30px;
 }
 }
-@media(max-width:500px){
+@media(max-width:520px){
     .MainSearchPageContainner{
     max-width: 500px;
     padding: 10px;
@@ -75,5 +100,18 @@ font-family: "Roboto", sans-serif;
     display: flex;
     flex-direction: column;
     margin-top: 30px;
+}
+.theGridContainner{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    max-width: 800px;
+    padding: 6px;
+    cursor: pointer;
+    overflow-y: scroll;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    background-color: #f5f6f8;;
+    column-gap: 20px;
+    row-gap: 20px;
 }
 }

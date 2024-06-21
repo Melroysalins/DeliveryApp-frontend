@@ -45,6 +45,11 @@ export default function LoginForm({ login, setIsDrawerOpen, setLoad }) {
     const result = await RegisterUser({ email, username, phone });
 
     if (result?.status === 200) {
+      const userAddress = {
+        village: "Dendur",
+        state_district: "Udupi District",
+        state: "Karnataka",
+      };
       setOpen(true);
       setMessage(result?.message);
       setSeverity("success");
@@ -53,6 +58,7 @@ export default function LoginForm({ login, setIsDrawerOpen, setLoad }) {
       }, 400);
       localStorage.setItem("userid", result?.userCreated?._id);
       localStorage.setItem("isloggin", true);
+      localStorage.setItem("useraddress", JSON.stringify(userAddress));
       setLoad(true);
     } else {
       setOpen(true);

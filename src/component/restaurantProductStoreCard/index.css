@@ -1,0 +1,24 @@
+.MainOuterContainner{
+    box-shadow: 0 4px 29px #e8e8e8;
+    background: none;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 24px;
+    max-width: 368px;
+    width: 100%;
+    padding-bottom: 26px;
+}
+.TheInfoContainner{
+    width: 100%;
+    display: flex;
+  
+    justify-content: space-between;
+}
+.NamandPriceContainner{
+  
+    display: flex;
+    width: 100%;
+    margin-top: 10px;
+    justify-content: space-between;
+}

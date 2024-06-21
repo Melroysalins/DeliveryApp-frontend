@@ -3,6 +3,17 @@
     position: relative;
     width: 210px;
 }
+.searchPageIMageDiv{
+    display: flex;
+    position: relative;
+    width: 140px;
+    height: 140px;
+}
+.searchPageIMageDiv img{
+    width: 100%;
+    height: 100%;
+     border-radius: 10px;
+}
 .ProductImageDiv img{
     width: 100%;
     height: 100%;
