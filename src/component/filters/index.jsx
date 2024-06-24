@@ -21,14 +21,7 @@ const Filters = () => {
     <div className="FiltersContainner">
       {!isScreenSmall && <FilterHeader filtercount={filtercount} />}
       <div className="FilterList">
-        {FilterList?.map((list) => (
-          <Filter
-            key={list?.id}
-            data={list}
-            setFilterCount={setFilterCount}
-            filtercount={filtercount}
-          />
-        ))}
+        <Filter />
       </div>
     </div>
   );

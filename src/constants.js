@@ -34,10 +34,6 @@ export const FilterList = [
     id: "110103",
     name: "NonVeg",
   },
-  {
-    id: "110104",
-    name: "Offer",
-  },
 ];
 
 export const BaseUrl = "http://localhost:5000/api";

@@ -9,7 +9,9 @@ import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
 const HomePage = () => {
-  const selector = useSelector((store) => store?.resList?.restaurantList);
+  const selector = useSelector((store) => store?.resList);
+
+  const selector2 = useSelector((store) => store?.resList?.restaurantList);
 
   const [loading, setLoading] = useState(true);
   const [restaurantList, setRestaurantList] = useState([]);
@@ -80,7 +82,7 @@ const HomePage = () => {
           </>
         )}
         <div className="Divider"></div>
-        {selector?.restaurantlist?.length > 0 && (
+        {selector2.length > 0 && (
           <div className="AllRestaurantSection">
             <TopRestaurantChains
               data={"Restaurants with online food delivery in"}
@@ -112,7 +114,7 @@ const HomePage = () => {
                       />
                     </div>
                   ))
-                : selector?.restaurantlist?.map((list) => (
+                : selector2?.map((list) => (
                     <Link to={`/restaurant/${list?.storeID}`}>
                       <RestaurantCard data={list} />
                     </Link>

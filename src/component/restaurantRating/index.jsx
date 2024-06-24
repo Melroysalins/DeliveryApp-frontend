@@ -5,7 +5,7 @@ const RestaurantRating = ({ rating }) => {
   return (
     <div className="DeliveryTimeContainner">
       <div className="dot"></div>
-      <p className="time">{rating}</p>
+      <p className="time">{rating + " min"}</p>
     </div>
   );
 };

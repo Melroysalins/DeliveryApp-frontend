@@ -7,7 +7,10 @@ import { getUserDetails } from "../../api/getUser";
 import { useDispatch } from "react-redux";
 import { setUserInfo } from "../../store/userSlice";
 import { getRestaurantListBasedonLocation } from "../../api/getRestaurantList";
-import { addRestaurantList } from "../../store/restaurantlistSlice";
+import {
+  addRestaurantList,
+  addtopRatedRestaurantList,
+} from "../../store/restaurantlistSlice";
 
 const NavBar = () => {
   const [isScreenSmall, setIsScreenSmall] = useState(window.innerWidth <= 930);
@@ -38,7 +41,8 @@ const NavBar = () => {
     const data = await getRestaurantListBasedonLocation({ state_district });
 
     if (data?.status === 200) {
-      dispatch(addRestaurantList(data?.list));
+      dispatch(addtopRatedRestaurantList(data?.list?.toprated));
+      dispatch(addRestaurantList(data?.list?.restaurantlist));
     }
   };
 
@@ -61,6 +65,15 @@ const NavBar = () => {
           <NavCategory activepath={activepath} setActivePath={setActivePath} />
         )}
         <UserLocation />
+        <svg
+          class="_1GTCc"
+          viewBox="-1 0 37 32"
+          height="20"
+          width="20"
+          fill="#686b78"
+        >
+          <path d="M4.438 0l-2.598 5.11-1.84 26.124h34.909l-1.906-26.124-2.597-5.11z"></path>
+        </svg>
       </div>
     </div>
   );

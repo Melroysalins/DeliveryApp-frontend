@@ -6,7 +6,10 @@ import { setUserLocation } from "../../api/setLocation";
 import { useDispatch } from "react-redux";
 import { setUserInfo } from "../../store/userSlice";
 import { getRestaurantListBasedonLocation } from "../../api/getRestaurantList";
-import { addRestaurantList } from "../../store/restaurantlistSlice";
+import {
+  addRestaurantList,
+  addtopRatedRestaurantList,
+} from "../../store/restaurantlistSlice";
 
 const GetHistory = ({ setOpen }) => {
   const dispatch = useDispatch();
@@ -52,7 +55,9 @@ const GetHistory = ({ setOpen }) => {
                 });
 
                 if (data?.status === 200) {
-                  dispatch(addRestaurantList(data?.list));
+                  console.log("The data --->", data);
+                  dispatch(addtopRatedRestaurantList(data?.list?.toprated));
+                  dispatch(addRestaurantList(data?.list?.restaurantlist));
                 }
 
                 setOpen(false);
