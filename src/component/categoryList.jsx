@@ -1,12 +1,19 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const CategoryList = ({ data, setActivePath, activepath }) => {
   const navigate = useNavigate();
+  const location = useLocation();
+  useEffect(() => {
+    // On component mount, set the active path based on the current URL
+    console.log("location->", location.pathname);
+    setActivePath(location.pathname);
+  }, [location.pathname, setActivePath]);
+
   return (
     <div className="CategoryList">
       <p
-        className={activepath === data?.name ? "selected" : "NonSelected"}
+        className={activepath === data?.path ? "selected" : "NonSelected"}
         onClick={() => {
           setActivePath(data?.name);
           navigate(data?.path);

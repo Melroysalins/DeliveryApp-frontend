@@ -1,0 +1,69 @@
+.CartDiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 75px;
+}
+.CartIconContainner{
+    display: flex;
+    align-items: center ;
+    cursor: pointer;
+    font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  width: 100%;
+  position: relative;
+  gap: 5px;
+}
+.CartIconContainner:hover{
+    color: #FC8A06;;;
+}
+._1GTCc {
+    stroke: #60b246;
+    fill: #60b246;
+    position: relative;
+    width: 100%;
+}
+._2MSid{
+    fill: #fff;
+    stroke-width: 2px;
+    stroke: #282c3f;
+    width: 100%;
+}
+._1GTCc:hover {
+    stroke:  #FC8A06;;
+    fill:  #FC8A06;;
+}
+.cartcountspan{
+    position: absolute;
+    font-size: 12px;
+    top: 50%;
+    left: 45%;
+    color: white;
+    transform: translate(-250%, -50%);
+}
+.cartcountspan2{
+    color: black;
+    position:absolute;
+    left: 20%;
+    font-size: 12px;
+}
+
+.CartIconContainner:hover ._1GTCc,
+.cartcountspan:hover ~ ._1GTCc,
+.CartIconContainner:hover ._2MSid,
+.cartcountspan2:hover ~ ._2MSid {
+  stroke: #FC8A06;
+  fill: #FC8A06;
+}
+
+/* Ensure .cartcountspan and .cartcountspan2 stay white on hover */
+.cartcountspan:hover, .cartcountspan2:hover {
+  color: white;
+}
+
+/* Change p color on hover of CartIconContainner */
+.CartIconContainner:hover p {
+  color: #FC8A06;
+}
+

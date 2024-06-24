@@ -39,7 +39,6 @@ const UserLocation = () => {
   return (
     <>
       <div className="UserLocationContainner">
-        <p>Other</p>
         <input
           type="text"
           placeholder={

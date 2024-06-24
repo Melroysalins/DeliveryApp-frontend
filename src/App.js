@@ -11,6 +11,7 @@ import { Suspense, lazy } from "react";
 import RestaurantPage from "./pages/restaurantPage";
 import SearchMenuListPage from "./pages/searchmenulist";
 import RestaurantProductSearch from "./pages/restaurantProductSearch";
+import CartPage from "./pages/cartPage";
 
 function App() {
   const RestaurantList = lazy(() => import("./pages/restaurantList"));
@@ -54,6 +55,7 @@ function App() {
               path="/search/food/:searchvalue"
               element={<RestaurantProductSearch />}
             />
+            <Route path="/cart" element={<CartPage />} />
           </Routes>
         </BrowserRouter>
       </div>

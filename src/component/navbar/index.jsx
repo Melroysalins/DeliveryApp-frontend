@@ -11,11 +11,14 @@ import {
   addRestaurantList,
   addtopRatedRestaurantList,
 } from "../../store/restaurantlistSlice";
+import Cart from "../cart";
+import { useLocation } from "react-router-dom";
 
 const NavBar = () => {
   const [isScreenSmall, setIsScreenSmall] = useState(window.innerWidth <= 930);
   const [activepath, setActivePath] = useState("Home");
   const dispatch = useDispatch();
+  const path = useLocation();
 
   const FetchUserDetails = async () => {
     const _id = localStorage.getItem("userid");
@@ -65,15 +68,7 @@ const NavBar = () => {
           <NavCategory activepath={activepath} setActivePath={setActivePath} />
         )}
         <UserLocation />
-        <svg
-          class="_1GTCc"
-          viewBox="-1 0 37 32"
-          height="20"
-          width="20"
-          fill="#686b78"
-        >
-          <path d="M4.438 0l-2.598 5.11-1.84 26.124h34.909l-1.906-26.124-2.597-5.11z"></path>
-        </svg>
+        <Cart />
       </div>
     </div>
   );
