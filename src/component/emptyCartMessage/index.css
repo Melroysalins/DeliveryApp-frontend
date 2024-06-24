@@ -1,0 +1,40 @@
+.EmptyCartMessageContainner{
+    display: flex;
+    flex-direction: column;
+    width: 380px;
+}
+.Message1{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+}
+.Message1 p{
+    margin-top: 24px;
+    font-size: 22px;
+    font-weight: 600;
+    color: #535665;
+     font-family: "Roboto", sans-serif;
+  font-style: normal;
+
+}
+.Message2{
+    display: flex;
+    width: 100%;
+    cursor: pointer;
+}
+.Message2 p{
+    margin-top: 8px;
+    color: #7e808c;
+      font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+}
+
+@media(max-width:400px){
+    .Message2{
+        font-size: 13px;
+        justify-content: center;
+    }
+}
