@@ -1,6 +1,7 @@
 .LoginSignUpComponent{
     display: flex;
     width: 100%;
+    margin-bottom: 15px;
 }
 .loginButton1{
     border: 1px solid #60b246;
@@ -31,7 +32,7 @@
     color: white;
     margin-left: 40px;
     text-align: center;
-    padding: 8px 35px 9px;
+    padding: 8px 39px 9px;
     line-height: 1.2;
     cursor: pointer;
     background-color:#60b246;

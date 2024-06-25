@@ -6,7 +6,12 @@ import { UserLogin } from "../api/userLogin";
 import { EmailandPhoneValidation } from "../utils/validations";
 import CustomizedSnackbars from "./snackBar";
 
-export default function LoginForm({ login, setIsDrawerOpen, setLoad }) {
+export default function LoginForm({
+  login,
+  setIsDrawerOpen,
+  setLoad,
+  iscartPage,
+}) {
   const [username, setUserName] = React.useState("");
   const [email, setEmail] = React.useState("");
   const [phone, setPhone] = React.useState("");
@@ -54,12 +59,13 @@ export default function LoginForm({ login, setIsDrawerOpen, setLoad }) {
       setMessage(result?.message);
       setSeverity("success");
       setTimeout(() => {
-        setIsDrawerOpen(false);
+        !iscartPage && setIsDrawerOpen(false);
       }, 400);
       localStorage.setItem("userid", result?.userCreated?._id);
       localStorage.setItem("isloggin", true);
       localStorage.setItem("useraddress", JSON.stringify(userAddress));
       setLoad(true);
+      window.location.reload();
     } else {
       setOpen(true);
       setMessage(result?.message);
@@ -75,11 +81,12 @@ export default function LoginForm({ login, setIsDrawerOpen, setLoad }) {
       setMessage(result?.message);
       setSeverity("success");
       setTimeout(() => {
-        setIsDrawerOpen(false);
+        !iscartPage && setIsDrawerOpen(false);
       }, 400);
       localStorage.setItem("userid", result?.user?._id);
       localStorage.setItem("isloggin", true);
       setLoad(true);
+      window.location.reload();
     } else {
       setOpen(true);
       setMessage(result?.message);
@@ -91,7 +98,13 @@ export default function LoginForm({ login, setIsDrawerOpen, setLoad }) {
     <Box
       component="form"
       sx={{
-        "& > :not(style)": { m: 1, width: !isScreenSmall ? "40ch" : "30ch" },
+        "& > :not(style)": {
+          m: 1,
+          width: !isScreenSmall ? "40ch" : "30ch",
+          display: "flex",
+          flexDirection: "column",
+          marginTop: iscartPage ? "15px" : "",
+        },
       }}
       noValidate
       autoComplete="off"

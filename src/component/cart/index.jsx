@@ -12,6 +12,8 @@ const Cart = () => {
 
   const dispatch = useDispatch();
 
+  const userloggedInfo = JSON.parse(localStorage.getItem("isloggin"));
+
   const FetchCartItems = async () => {
     const userID = localStorage.getItem("userid");
 
@@ -25,7 +27,7 @@ const Cart = () => {
   };
 
   useEffect(() => {
-    FetchCartItems();
+    userloggedInfo && FetchCartItems();
     selector ? setPresent(true) : setPresent(false);
   }, []);
   return (

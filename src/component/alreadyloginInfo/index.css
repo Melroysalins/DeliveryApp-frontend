@@ -1,0 +1,15 @@
+.alreadyloginfo{
+      padding: 21px 22px 13px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+.userinfoDivider{
+    width: 2px;
+    background-color: black;
+    height: 20px;
+}

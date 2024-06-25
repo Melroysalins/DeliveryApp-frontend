@@ -5,7 +5,7 @@ import NavCategory from "../navCategory";
 import UserLocation from "../userLocation";
 import { getUserDetails } from "../../api/getUser";
 import { useDispatch } from "react-redux";
-import { setUserInfo } from "../../store/userSlice";
+import { AdduserInfo, setUserInfo } from "../../store/userSlice";
 import { getRestaurantListBasedonLocation } from "../../api/getRestaurantList";
 import {
   addRestaurantList,
@@ -38,6 +38,7 @@ const NavBar = () => {
     console.log("user info--->", result);
 
     dispatch(setUserInfo(result?.user?.address[0]));
+    dispatch(AdduserInfo(result?.user));
   };
   const FetchRestaurantList = async () => {
     const { state_district } = JSON.parse(localStorage.getItem("useraddress"));

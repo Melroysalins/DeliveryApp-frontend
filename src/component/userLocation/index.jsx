@@ -59,6 +59,7 @@ const UserLocation = () => {
           onClick={() => {
             localStorage.setItem("isloggin", false);
             setUserLoggedIn(false);
+            window.location.reload();
           }}
         >
           Logout

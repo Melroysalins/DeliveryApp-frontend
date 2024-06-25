@@ -1,12 +1,25 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./index.css";
 import SectionHeader from "../sectionHeader";
 import SectionMessage from "../sectionMessage";
 import SectionImage from "../sectionImage";
 import LoginSignUPComponent from "../loginSignup";
 import SiderIcon from "../sideIcon";
+import CartLoginComponent from "../cartloginComponent";
+import AlreadyLoginInfo from "../alreadyloginInfo";
 
-const InfoSection = ({ header, sidemessage, showloginbutton, icon }) => {
+const InfoSection = ({
+  header,
+  sidemessage,
+  showloginbutton,
+  icon,
+  account,
+}) => {
+  const [login, setLogin] = useState(false);
+  const [load, setLoad] = useState(true);
+
+  const userloggedInfo = JSON.parse(localStorage.getItem("isloggin"));
+
   return (
     <div className="InfoSection">
       <div className="Section1">
@@ -17,7 +30,14 @@ const InfoSection = ({ header, sidemessage, showloginbutton, icon }) => {
         </div>
         {showloginbutton && <SectionImage />}
       </div>
-      {showloginbutton && <LoginSignUPComponent />}
+      {showloginbutton && !userloggedInfo && (
+        <LoginSignUPComponent setLogin={setLogin} />
+      )}
+
+      {!userloggedInfo && login && load && (
+        <CartLoginComponent cartpage={true} load={load} setLoad={setLoad} />
+      )}
+      {userloggedInfo && account && load && <AlreadyLoginInfo />}
     </div>
   );
 };

@@ -21,6 +21,7 @@ const CartLayout = () => {
             }
             showloginbutton={true}
             icon={<PersonIcon />}
+            account={true}
           />
           <InfoSection header={"Delivery address"} icon={<PlaceIcon />} />
           <InfoSection header={"Payment"} icon={<AccountBalanceWalletIcon />} />

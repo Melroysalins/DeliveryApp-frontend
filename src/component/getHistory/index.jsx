@@ -4,7 +4,7 @@ import MyLocationIcon from "@mui/icons-material/MyLocation";
 import { getUserCurrentLocation } from "../../api/getLocation";
 import { setUserLocation } from "../../api/setLocation";
 import { useDispatch } from "react-redux";
-import { setUserInfo } from "../../store/userSlice";
+import { AdduserInfo, setUserInfo } from "../../store/userSlice";
 import { getRestaurantListBasedonLocation } from "../../api/getRestaurantList";
 import {
   addRestaurantList,
@@ -43,6 +43,7 @@ const GetHistory = ({ setOpen }) => {
 
               if (response2?.status === 200) {
                 dispatch(setUserInfo(response2?.user?.address[0]));
+                dispatch(AdduserInfo(response2?.user));
                 localStorage.setItem(
                   "useraddress",
                   JSON.stringify(response2?.user?.address[0])

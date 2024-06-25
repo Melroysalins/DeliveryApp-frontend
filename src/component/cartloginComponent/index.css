@@ -1,0 +1,22 @@
+.CartLoginComponentContainner{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+     padding: 21px 22px 13px;
+     gap: 20px;
+}
+.MessageContainner{
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    cursor: pointer;
+}
+.MessageContainner p{
+    font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+.MessageContainner span{
+     font-family: "Roboto", sans-serif;
+     color: #FC8A06;;
+}
