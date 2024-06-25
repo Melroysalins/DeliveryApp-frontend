@@ -39,6 +39,66 @@
 
 }
 
+.TwoButtonCOntainner{
+    width: 100%;
+    margin-top: 27px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding: 5px;
+}
+
+
+.Nobtn{
+    flex-grow: 1;
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    display: -ms-flexbox;
+    display: flex;
+    cursor: pointer;
+    background-color: #fff;
+    border: 2px solid #60b246;
+    font-weight: 600;
+    padding: 13px;
+    color: #60b246;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-transform: uppercase;
+}
+.Nobtn:hover{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.Yesbtn:hover{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.Yesbtn{
+    flex-grow: 1;
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    display: -ms-flexbox;
+    display: flex;
+    cursor: pointer;
+    padding: 13px;
+    background-color: #60b246;
+    border: 2px solid #60b246;
+    font-weight: 600;
+    color: #fff;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+
+
+
+
+
 @media(max-width:640px){
     .ProductImageDiv{
     display: flex;

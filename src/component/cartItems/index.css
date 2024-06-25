@@ -1,0 +1,72 @@
+.CartItems{
+    margin-top: 27px;
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+}
+.cartdisplayicon{
+    border: 1px solid #0f8a65;;
+    width: 10px;
+    height: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.dott{
+    background-color: #0f8a65;
+    width: 5px;
+    height: 5px;
+    border-radius: 100%;
+}
+.cartproductname{
+    display: flex;
+}
+.cartproductname p{
+    font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 13px;
+}
+.cartItemIncrementContainner{
+    border: 1px solid #d4d5d9;
+    width: 80px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    justify-content: space-between;
+}
+.minus{
+    padding: 3px;
+    background-color: white;
+    color: #9d9d9d;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+}
+.plus{
+     padding: 3px;
+    background-color: white;
+    color: #0f8a65;
+    border: none;
+    font-size: 19px;
+    cursor: pointer;
+}
+.pricedisplay {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 13px;
+    color: rgb(116, 115, 115);
+}
+.pricedisplay p{
+    font-size: 13px;
+     font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+.pricedisplayicon{
+    font-size: 10px;
+}

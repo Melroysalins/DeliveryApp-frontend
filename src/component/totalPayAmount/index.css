@@ -1,0 +1,17 @@
+.TotalPayAmountSection{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    width: 100%;
+    padding: 17px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.TotalPayAmountSection p{
+    font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+.AmountoPay{
+    display: flex;
+    align-items: center;
+}

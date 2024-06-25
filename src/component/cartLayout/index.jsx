@@ -4,6 +4,10 @@ import InfoSection from "../infoSection";
 import PersonIcon from "@mui/icons-material/Person";
 import PlaceIcon from "@mui/icons-material/Place";
 import AccountBalanceWalletIcon from "@mui/icons-material/AccountBalanceWallet";
+import { RestaurantSection } from "../restaurantSection";
+import CartItems from "../cartItems";
+import BillDetails from "../billDetails";
+import TotalPayAmount from "../totalPayAmount";
 
 const CartLayout = () => {
   return (
@@ -21,7 +25,21 @@ const CartLayout = () => {
           <InfoSection header={"Delivery address"} icon={<PlaceIcon />} />
           <InfoSection header={"Payment"} icon={<AccountBalanceWalletIcon />} />
         </div>
-        <div className="Layout2">Layout2</div>
+        <div className="Layout2">
+          <div className="Layout2Section">
+            <RestaurantSection />
+            <CartItems />
+            <CartItems />
+            <CartItems />
+            <CartItems />
+            <CartItems />
+            <CartItems />
+            <CartItems />
+            <CartItems />
+            <BillDetails />
+          </div>
+          <TotalPayAmount />
+        </div>
       </div>
     </div>
   );

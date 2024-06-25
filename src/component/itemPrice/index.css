@@ -1,0 +1,22 @@
+.ItemPrice{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 4px;
+}
+.ItemPrice p{
+    font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  color: rgb(76, 76, 76);
+  font-size: 12px;
+}
+.ItemPrice span{
+    display: flex;
+    align-items: center;
+    font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  color: rgb(76, 76, 76);
+  font-size: 12px;
+}

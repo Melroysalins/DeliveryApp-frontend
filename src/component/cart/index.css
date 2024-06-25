@@ -22,13 +22,13 @@
     stroke: #60b246;
     fill: #60b246;
     position: relative;
-    width: 100%;
+    width: 43px;
 }
 ._2MSid{
     fill: #fff;
     stroke-width: 2px;
     stroke: #282c3f;
-    width: 100%;
+    width: 43px;
 }
 ._1GTCc:hover {
     stroke:  #FC8A06;;
@@ -36,17 +36,18 @@
 }
 .cartcountspan{
     position: absolute;
-    font-size: 12px;
-    top: 50%;
-    left: 45%;
+    font-size: 11.5px;
+    left: 18%;
     color: white;
-    transform: translate(-250%, -50%);
+  
+   
 }
 .cartcountspan2{
     color: black;
     position:absolute;
-    left: 20%;
-    font-size: 12px;
+    left: 18%;
+    font-size: 11.5px;
+  
 }
 
 .CartIconContainner:hover ._1GTCc,

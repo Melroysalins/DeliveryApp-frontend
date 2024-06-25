@@ -28,7 +28,7 @@ const ProductInfo = ({ data, isLast }) => {
           )}
         </div>
         <div className="ProductImageContainner">
-          <ProductImage image={data?.image?.url} />
+          <ProductImage image={data?.image?.url} data={data} />
         </div>
       </div>
       {isScreenSmall && <ProductDescription description={data?.description} />}

@@ -38,7 +38,11 @@ const RestaurantProductStoreCard = ({ data }) => {
           <ProductName name={data?.productname} />
           <ProductPrice price={data?.price} />
         </div>
-        <ProductImage image={data?.productimage?.url} issearchpage={true} />
+        <ProductImage
+          image={data?.productimage?.url}
+          issearchpage={true}
+          data={data}
+        />
       </div>
     </div>
   );
