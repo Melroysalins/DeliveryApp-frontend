@@ -1,0 +1,8 @@
+.SectionImageContainner{
+    width: 120px;
+    display: flex;
+}
+.SectionImageContainner img{
+    width: 100%;
+    height: 100%;
+}

@@ -1,0 +1,25 @@
+.InfoSection{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 21px 22px 13px;
+    position: relative;
+    border: 1px solid red;
+    background-color: white;
+
+}
+
+.Section1{
+    position: relative;
+    margin-left: 25px;
+    margin-bottom: 20px;
+    display: flex;
+
+}
+.Info_Section{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 100%;
+}

@@ -1,0 +1,12 @@
+.SectionHeader{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.SectionHeader p{
+     font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-size: 17px;
+  font-style: normal;
+
+}
