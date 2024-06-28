@@ -44,6 +44,7 @@ const GetHistory = ({ setOpen }) => {
               if (response2?.status === 200) {
                 dispatch(setUserInfo(response2?.user?.address[0]));
                 dispatch(AdduserInfo(response2?.user));
+                window.location.reload();
                 localStorage.setItem(
                   "useraddress",
                   JSON.stringify(response2?.user?.address[0])

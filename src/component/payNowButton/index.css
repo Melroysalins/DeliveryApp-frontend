@@ -1,0 +1,22 @@
+.PayNowButtonContainner{
+    display: flex;
+    width: 100%;
+    margin-top: 20px;
+    justify-content: center;
+}
+.PayNowButtonContainner button{
+        background: #60b246;
+        border: none;
+        padding: 12px;
+        width: 250px;
+        cursor: pointer;
+        color: white;
+        
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+
+}
+.PayNowButtonContainner button:hover{
+    opacity: 0.7;
+}

@@ -1,0 +1,30 @@
+.ApplyCouponeContainner{
+    width: 100%;
+    display: flex;
+    margin-top: 25px;
+    justify-content: center;
+}
+.CouponBox{
+    display: flex;
+    border: 1px dashed #a9abb2;
+    color: #535665;
+    font-size: 14px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    cursor: pointer;
+    padding: 0 15px;
+    width: 250px;
+    margin: 10px 0 15px;
+    font-weight: 500;
+    height: 55px;
+    text-align:  center;
+    justify-content: center;
+    font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+.CouponBox:hover{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}

@@ -10,7 +10,7 @@ const RestaurantCard = ({ data }) => {
     <div className="RestaurantCardContainner">
       <div className="RestaurantCard">
         <div className="RestaurantImageContainner">
-          <img src={data?.file?.url} />
+          <img src={data?.file?.url} loading="lazy" />
           <div className="OverLayContainner">
             <p>
               {data?.offer !== "null" ? "up to " + data?.offer + "% 0ff" : ""}

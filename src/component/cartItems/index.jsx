@@ -2,23 +2,28 @@ import React from "react";
 import "./index.css";
 import CurrencyRupeeIcon from "@mui/icons-material/CurrencyRupee";
 
-const CartItems = () => {
+const CartItems = ({ data }) => {
+  const capitalizeFirstLetter = (string) => {
+    if (!string) return "";
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  };
+
   return (
     <div className="CartItems">
       <div className="cartdisplayicon">
         <div className="dott"></div>
       </div>
       <div className="cartproductname">
-        <p>Veg Pizza</p>
+        <p>{capitalizeFirstLetter(data?.productname)}</p>
       </div>
       <div className="cartItemIncrementContainner">
         <button className="minus">-</button>
-        <p>1</p>
+        <p>{data?.quantity}</p>
         <button className="plus">+</button>
       </div>
       <div className="pricedisplay">
         <CurrencyRupeeIcon sx={{ fontSize: "13px" }} />
-        <p>99</p>
+        <p>{data?.price}</p>
       </div>
     </div>
   );

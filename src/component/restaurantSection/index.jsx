@@ -1,7 +1,12 @@
 import React from "react";
 import "./index.css";
 
-export const RestaurantSection = () => {
+export const RestaurantSection = ({ data }) => {
+  const capitalizeFirstLetter = (string) => {
+    if (!string) return "";
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  };
+
   return (
     <div className="RestaurantSection">
       <div className="RestaurantImageDv">
@@ -12,8 +17,12 @@ export const RestaurantSection = () => {
         />
       </div>
       <div className="RestaurantNamePlace">
-        <p>Manipal Express</p>
-        <span>Udupi</span>
+        <p>{capitalizeFirstLetter(data?.storename)}</p>
+        <span>
+          {capitalizeFirstLetter(
+            data?.address[0]?.state_district?.split(" ")[0]
+          )}
+        </span>
         <div className="section_divider"></div>
       </div>
     </div>

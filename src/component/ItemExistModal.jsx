@@ -15,13 +15,13 @@ const style = {
   p: 4,
 };
 
-export default function ItemExistModal({ open, setOpen, setMessage }) {
-  const handleClose = () => setOpen(false);
+export default function ItemExistModal({ open2, setOpen2, setMessage }) {
+  const handleClose = () => setOpen2(false);
 
   return (
     <div>
       <Modal
-        open={open}
+        open={open2}
         onClose={handleClose}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
@@ -53,7 +53,7 @@ export default function ItemExistModal({ open, setOpen, setMessage }) {
               className="Nobtn"
               onClick={() => {
                 setMessage(false);
-                setOpen(false);
+                setOpen2(false);
               }}
             >
               No

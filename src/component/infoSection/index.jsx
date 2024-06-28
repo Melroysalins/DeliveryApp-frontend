@@ -7,6 +7,8 @@ import LoginSignUPComponent from "../loginSignup";
 import SiderIcon from "../sideIcon";
 import CartLoginComponent from "../cartloginComponent";
 import AlreadyLoginInfo from "../alreadyloginInfo";
+import AddressDisplay from "../addressDisplay";
+import PayNowButton from "../payNowButton";
 
 const InfoSection = ({
   header,
@@ -14,6 +16,8 @@ const InfoSection = ({
   showloginbutton,
   icon,
   account,
+  address,
+  payment,
 }) => {
   const [login, setLogin] = useState(false);
   const [load, setLoad] = useState(true);
@@ -38,6 +42,8 @@ const InfoSection = ({
         <CartLoginComponent cartpage={true} load={load} setLoad={setLoad} />
       )}
       {userloggedInfo && account && load && <AlreadyLoginInfo />}
+      {address && <AddressDisplay />}
+      {payment && <PayNowButton />}
     </div>
   );
 };

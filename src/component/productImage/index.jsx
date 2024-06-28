@@ -8,9 +8,12 @@ import { getCartItems } from "../../api/getCartItems";
 import { AddItemToCart } from "../../store/cartSlice";
 import ItemExistModal from "../ItemExistModal";
 import { deletePreviousCartItem } from "../../api/deletePreviousCartItem";
+import CustomizedSnackbars from "../snackBar";
 
 const ProductImage = ({ image, issearchpage, data }) => {
+  const [open2, setOpen2] = useState(false);
   const [open, setOpen] = useState(false);
+  const [severity, setSeverity] = useState("success");
   const [message, setMessage] = useState();
   const { _id } = useParams();
 
@@ -33,7 +36,10 @@ const ProductImage = ({ image, issearchpage, data }) => {
         dispatch(AddItemToCart(result?.userCartItem[0]));
       }
     } else if (result?.status === 201) {
+      setOpen2(true);
+    } else if (result?.status === 406) {
       setOpen(true);
+      setSeverity("error");
     }
   };
 
@@ -48,7 +54,7 @@ const ProductImage = ({ image, issearchpage, data }) => {
         });
 
         if (result2?.status === 200) {
-          setOpen(false);
+          setOpen2(false);
           const result = await getCartItems({ userID });
 
           if (result?.status === 200) {
@@ -66,12 +72,22 @@ const ProductImage = ({ image, issearchpage, data }) => {
   return (
     <>
       <div className={!issearchpage ? "ProductImageDiv" : "searchPageIMageDiv"}>
-        <img src={image} />
+        <img src={image} loading="lazy" />
         <button className="AddProductButton" onClick={() => handleaddtoCart()}>
           ADD
         </button>
       </div>
-      <ItemExistModal open={open} setOpen={setOpen} setMessage={setMessage} />
+      <ItemExistModal
+        open2={open2}
+        setOpen2={setOpen2}
+        setMessage={setMessage}
+      />
+      <CustomizedSnackbars
+        open={open}
+        setOpen={setOpen}
+        severity={severity}
+        message={"You've added the maximum quantity available for this item"}
+      />
     </>
   );
 };
