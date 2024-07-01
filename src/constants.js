@@ -17,7 +17,7 @@ export const NavbarCategoryList = [
   {
     id: 104,
     name: "Track Order",
-    path: "/trackerorder",
+    path: "/trackorder",
   },
 ];
 

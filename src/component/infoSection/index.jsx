@@ -18,6 +18,7 @@ const InfoSection = ({
   account,
   address,
   payment,
+  showcartpage,
 }) => {
   const [login, setLogin] = useState(false);
   const [load, setLoad] = useState(true);
@@ -42,8 +43,10 @@ const InfoSection = ({
         <CartLoginComponent cartpage={true} load={load} setLoad={setLoad} />
       )}
       {userloggedInfo && account && load && <AlreadyLoginInfo />}
-      {address && <AddressDisplay />}
-      {payment && <PayNowButton />}
+      {address && userloggedInfo && <AddressDisplay />}
+      {payment && userloggedInfo && (
+        <PayNowButton amount={showcartpage?.totalprice} />
+      )}
     </div>
   );
 };

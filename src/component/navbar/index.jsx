@@ -35,8 +35,6 @@ const NavBar = () => {
 
     const result = await getUserDetails({ _id });
 
-    console.log("user info--->", result);
-
     dispatch(setUserInfo(result?.user?.address[0]));
     dispatch(AdduserInfo(result?.user));
   };

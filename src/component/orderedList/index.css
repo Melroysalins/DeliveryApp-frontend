@@ -1,0 +1,51 @@
+.OrderedListContainner{
+    padding: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 10px;
+}
+.OrderedFoodName{
+    display: flex;
+    align-items: center;
+}
+.OrderedFoodName p{
+    font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+.OrderedQuantity{
+      display: flex;
+    align-items: center;
+    gap: 3px;
+}
+.OrderedQuantity p {
+     font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+.OrderedQuantity span{
+     font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  color: rgb(83, 82, 82);
+}
+
+.Orderedprice{
+     display: flex;
+    align-items: center;
+     gap: 3px;
+}
+
+.Orderedprice p {
+   font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+.Orderedprice span{
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  color: rgb(83, 82, 82);
+}

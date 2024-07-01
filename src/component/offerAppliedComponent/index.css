@@ -1,0 +1,31 @@
+.OfferAppliedContainner{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    cursor: pointer;
+    gap: 20px;
+}
+.OfferAppliedContainner img{
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+.MessageContainner{
+    display: flex;
+    align-items: center;
+}
+.MessageContainner p{
+    font-family: "Roboto", sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  font-style: normal;
+  color: rgb(77, 77, 77);
+}
+.MessageContainner span{
+    display: flex;
+    align-items: center;
+    font-size: 22px;
+    color: black;
+    font-weight: bold;
+      font-family: "Roboto", sans-serif;
+}

@@ -1,0 +1,67 @@
+.PaymentPage{
+    width: 100%;
+    height: 100vh;
+    background: #e9ecee;
+    display: flex;
+    justify-content: center;
+    overflow-y: none;
+    margin-top: -3px;
+}
+.textwrapper{
+    max-width: 900px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.PaymentPage h2{
+    margin-top: 109px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    cursor: pointer;
+    font-size: 20px;
+    color: rgb(88, 88, 88);
+}
+
+@media(max-width:890px){
+    .textwrapper{
+    border: 1px solid black;
+    max-width: 700px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.PaymentPage h2{
+    margin-top: 109px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    cursor: pointer;
+    font-size: 17px;
+    color: rgb(88, 88, 88);
+    padding: 10px;
+}
+}
+
+@media(max-width:500px){
+    .PaymentPage{
+    width: 100%;
+    height: 100%;
+    background: white;
+    display: flex;
+    justify-content: center;
+    overflow-y: none;
+    margin-top: -3px;
+}
+.afterPaymentContainner{
+    width: 500px;
+    height: 100%;
+    background-color: white;
+    border-radius: 8px;
+    margin-top: 30px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+}

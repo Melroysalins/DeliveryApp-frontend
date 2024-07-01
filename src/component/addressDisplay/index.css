@@ -104,3 +104,41 @@
 .deliverhere2:hover{
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
+
+@media(max-width:430px){
+    .DisplayAddressContainner{
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    width: 100%;
+    padding: 14px;
+    flex-direction: column;
+}
+.FirstAddressContainner{
+    position: relative;
+    width: 324px;
+    margin: 0 -3px 25px 0;
+    cursor: pointer;
+    padding: 10px;
+    border: 1px solid #e9e9eb;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex: 1;
+    flex-direction: column;
+    margin-bottom: 20px;
+
+}
+.SecondAddressContainner{
+     position: relative;
+    width: 324px;
+    margin: 0 -3px 25px 0;
+    cursor: pointer;
+    padding: 10px;
+    border: 1px dashed #e9e9eb;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex: 1;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+}

@@ -7,10 +7,10 @@ import RestaurantCard from "../../component/restaurantCard";
 import Filters from "../../component/filters";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import NoRestaurantFoundPage from "../noRestaurantFoundPage";
 
 const HomePage = () => {
   const selector = useSelector((store) => store?.resList);
-
   const selector2 = useSelector((store) => store?.resList?.restaurantList);
 
   const [loading, setLoading] = useState(true);
@@ -45,12 +45,12 @@ const HomePage = () => {
       <div className="HomePageContainner">
         {selector?.toprated?.length > 0 && (
           <>
-            {" "}
-            <TopRestaurantChains data={"Top rated  restaurant chains in"} />
+            <TopRestaurantChains data={"Top rated restaurant chains in"} />
             <div className="TopRatedRestaurantContainner">
               {loading
                 ? Array.from(new Array(4)).map((_, index) => (
                     <div
+                      key={index} // Added key to avoid warning
                       style={{
                         display: "flex",
                         flexDirection: "column",
@@ -74,25 +74,24 @@ const HomePage = () => {
                   ))
                 : selector?.toprated?.map((list) => (
                     <Link to={`/restaurant/${list?.storeID}`} key={list?._id}>
-                      {" "}
                       <RestaurantCard data={list} />
                     </Link>
                   ))}
-            </div>{" "}
+            </div>
           </>
         )}
-        <div className="Divider"></div>
-        {selector2.length > 0 && (
+        {selector?.toprated?.length > 0 && <div className="Divider"></div>}
+        {selector2.length > 0 ? (
           <div className="AllRestaurantSection">
             <TopRestaurantChains
               data={"Restaurants with online food delivery in"}
             />
             <Filters />
-
             <div className="RestauranContainner">
               {loading
                 ? Array.from(new Array(10)).map((_, index) => (
                     <div
+                      key={index} // Added key to avoid warning
                       style={{
                         display: "flex",
                         flexDirection: "column",
@@ -115,12 +114,14 @@ const HomePage = () => {
                     </div>
                   ))
                 : selector2?.map((list) => (
-                    <Link to={`/restaurant/${list?.storeID}`}>
+                    <Link to={`/restaurant/${list?.storeID}`} key={list?._id}>
                       <RestaurantCard data={list} />
                     </Link>
                   ))}
             </div>
           </div>
+        ) : (
+          !loading && <NoRestaurantFoundPage /> // Render NoRestaurantPage when selector2 is empty and loading is false
         )}
       </div>
     </div>

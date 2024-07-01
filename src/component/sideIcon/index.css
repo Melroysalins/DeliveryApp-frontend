@@ -12,3 +12,20 @@
     color: white;
     cursor: pointer;
 }
+
+@media(max-width:630px){
+    .SideIconContainner {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    background-color: #282c3f;
+    box-shadow: 0 3px 5px 0 rgba(40, 44, 63, .4);
+    top: -8px;
+    left: -52px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    cursor: pointer;
+}
+}

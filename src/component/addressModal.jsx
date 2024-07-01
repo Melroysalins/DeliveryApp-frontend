@@ -8,6 +8,7 @@ import Typography from "@mui/material/Typography";
 import { useSpring, animated } from "@react-spring/web";
 import AddressHistory from "./addressHistory";
 import GetHistory from "./getHistory";
+import OfferAppliedComponent from "./offerAppliedComponent";
 
 const Fade = React.forwardRef(function Fade(props, ref) {
   const {
@@ -72,7 +73,7 @@ const style2 = {
   p: 4,
   borderRadius: "10px",
 };
-export default function AddressModal({ open, setOpen }) {
+export default function AddressModal({ open, setOpen, applied, value }) {
   const handleClose = () => setOpen(false);
 
   const [isScreenSmall, setIsScreenSmall] = React.useState(
@@ -104,7 +105,11 @@ export default function AddressModal({ open, setOpen }) {
       >
         <Fade in={open}>
           <Box sx={!isScreenSmall ? style : style2}>
-            <GetHistory setOpen={setOpen} />
+            {!applied ? (
+              <GetHistory setOpen={setOpen} />
+            ) : (
+              <OfferAppliedComponent value={value} />
+            )}
           </Box>
         </Fade>
       </Modal>

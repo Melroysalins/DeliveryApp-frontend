@@ -12,6 +12,7 @@ import RestaurantPage from "./pages/restaurantPage";
 import SearchMenuListPage from "./pages/searchmenulist";
 import RestaurantProductSearch from "./pages/restaurantProductSearch";
 import CartPage from "./pages/cartPage";
+import PaymentPage from "./pages/payment";
 
 function App() {
   const RestaurantList = lazy(() => import("./pages/restaurantList"));
@@ -42,7 +43,7 @@ function App() {
               }
             />
             <Route
-              path="/trackerorder"
+              path="/trackorder"
               element={
                 <Suspense fallback={<div>Loading...</div>}>
                   <TrackOrder />
@@ -56,6 +57,10 @@ function App() {
               element={<RestaurantProductSearch />}
             />
             <Route path="/cart" element={<CartPage />} />
+            <Route
+              path="/payment/reference/:razorpay_payment_id"
+              element={<PaymentPage />}
+            />
           </Routes>
         </BrowserRouter>
       </div>

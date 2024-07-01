@@ -3,7 +3,7 @@ import "./index.css";
 import ItemPrice from "../itemPrice";
 import { useSelector } from "react-redux";
 
-const BillDetails = () => {
+const BillDetails = ({ bill }) => {
   const selector = useSelector((store) => store?.cart?.cartitems?.totalprice);
   return (
     <div className="BillDetailsContainner">
@@ -11,7 +11,7 @@ const BillDetails = () => {
         <p>Bill Details</p>
       </div>
       <div className="ItemPriceSection">
-        <ItemPrice price={selector} />
+        <ItemPrice price={bill} />
       </div>
     </div>
   );

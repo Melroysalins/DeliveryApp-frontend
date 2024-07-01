@@ -22,4 +22,24 @@ const addProductToCart = async ({ _id, storeID }) => {
   return response;
 };
 
-export { addProductToCart };
+const removeProductQuantity = async ({ userID, storeID, _id }) => {
+  const data = {
+    userID,
+    storeID,
+    _id,
+  };
+
+  const result = await fetch(`${BaseUrl}/user/removeItem`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(data),
+  });
+
+  const response = await result.json();
+
+  return response;
+};
+
+export { addProductToCart, removeProductQuantity };
