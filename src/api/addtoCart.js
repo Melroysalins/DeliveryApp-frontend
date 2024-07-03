@@ -22,11 +22,12 @@ const addProductToCart = async ({ _id, storeID }) => {
   return response;
 };
 
-const removeProductQuantity = async ({ userID, storeID, _id }) => {
+const removeProductQuantity = async ({ userID, storeID, _id, cartID }) => {
   const data = {
     userID,
     storeID,
     _id,
+    cartID,
   };
 
   const result = await fetch(`${BaseUrl}/user/removeItem`, {

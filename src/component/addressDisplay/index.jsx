@@ -8,6 +8,11 @@ import AddressModal from "../addressModal";
 const AddressDisplay = () => {
   const [open, setOpen] = useState(false);
   const addressSelector = useSelector((store) => store?.user?.userInfo);
+
+  const village = addressSelector?.village || " ";
+  const stateDistrict = addressSelector?.state_district || "Udupi";
+  const state = addressSelector?.state || "Karnataka";
+
   return (
     <div className="DisplayAddressContainner">
       <div className="FirstAddressContainner">
@@ -15,13 +20,7 @@ const AddressDisplay = () => {
           <FmdGoodIcon />
           <div className="addresss">
             <p>Other</p>
-            <span>
-              {addressSelector?.village +
-                ", " +
-                addressSelector?.state_district +
-                ", " +
-                addressSelector?.state}
-            </span>
+            <span>{village + " " + stateDistrict + ", " + state}</span>
           </div>
         </div>
         <div

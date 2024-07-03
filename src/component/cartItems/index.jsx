@@ -19,6 +19,8 @@ const CartItems = ({ data, setLoad, setShowCartPage }) => {
 
   const userID = localStorage.getItem("userid");
 
+  const _id = JSON.parse(localStorage.getItem("cart"));
+
   const capitalizeFirstLetter = (string) => {
     if (!string) return "";
     return string.charAt(0).toUpperCase() + string.slice(1);
@@ -43,17 +45,35 @@ const CartItems = ({ data, setLoad, setShowCartPage }) => {
   };
 
   const handleQuantityDecrement = async () => {
-    const result = await removeProductQuantity({
-      _id: data?.productID,
-      storeID,
-      userID,
-    });
-    if (result?.status === 200) {
-      const result = await getCartItems({ userID });
-      setLoad(true);
-      setShowCartPage(result?.userCartItem[0]);
+    if (userID) {
+      const result = await removeProductQuantity({
+        _id: data?.productID,
+        storeID,
+        userID,
+        cartID: "",
+      });
       if (result?.status === 200) {
-        dispatch(AddItemToCart(result?.userCartItem[0]));
+        const result = await getCartItems({ userID });
+        setLoad(true);
+        setShowCartPage(result?.userCartItem[0]);
+        if (result?.status === 200) {
+          dispatch(AddItemToCart(result?.userCartItem[0]));
+        }
+      }
+    } else {
+      const result = await removeProductQuantity({
+        _id: data?.productID,
+        storeID,
+        userID,
+        cartID: _id?._id,
+      });
+      if (result?.status === 200) {
+        const result = await getCartItems({ userID });
+        setLoad(true);
+        setShowCartPage(result?.userCartItem[0]);
+        if (result?.status === 200) {
+          dispatch(AddItemToCart(result?.userCartItem[0]));
+        }
       }
     }
   };

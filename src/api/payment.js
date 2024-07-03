@@ -9,6 +9,8 @@ const CheckOutPayment = async ({
   storeID,
   products,
   totalprice,
+  storeinfo,
+  userInfo,
 }) => {
   try {
     const data = {
@@ -17,6 +19,8 @@ const CheckOutPayment = async ({
       storeID,
       products,
       totalprice,
+      storeinfo,
+      userInfo,
     };
 
     console.log("Backend send data-->", data);

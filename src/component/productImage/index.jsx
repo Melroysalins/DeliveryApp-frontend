@@ -3,7 +3,7 @@ import "./index.css";
 import Button from "@mui/material/Button";
 import { useParams } from "react-router-dom";
 import { addProductToCart } from "../../api/addtoCart";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { getCartItems } from "../../api/getCartItems";
 import { AddItemToCart } from "../../store/cartSlice";
 import ItemExistModal from "../ItemExistModal";
@@ -21,7 +21,7 @@ const ProductImage = ({ image, issearchpage, data }) => {
 
   const userID = localStorage.getItem("userid");
 
-  console.log("data-->", data);
+  const cart = useSelector((store) => store?.cart?.cartitems);
 
   const handleaddtoCart = async () => {
     const result = await addProductToCart({
@@ -31,6 +31,13 @@ const ProductImage = ({ image, issearchpage, data }) => {
 
     if (result?.status === 200) {
       const result = await getCartItems({ userID });
+      console.log("Result from getcart--->", cart);
+      if (!userID) {
+        localStorage.setItem("cart", JSON.stringify(result?.userCartItem[0]));
+      }
+      if (userID) {
+        localStorage.removeItem("cart");
+      }
 
       if (result?.status === 200) {
         dispatch(AddItemToCart(result?.userCartItem[0]));

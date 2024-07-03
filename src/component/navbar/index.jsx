@@ -4,7 +4,7 @@ import Logo from "../logo";
 import NavCategory from "../navCategory";
 import UserLocation from "../userLocation";
 import { getUserDetails } from "../../api/getUser";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { AdduserInfo, setUserInfo } from "../../store/userSlice";
 import { getRestaurantListBasedonLocation } from "../../api/getRestaurantList";
 import {
@@ -13,12 +13,15 @@ import {
 } from "../../store/restaurantlistSlice";
 import Cart from "../cart";
 import { useLocation } from "react-router-dom";
+import { AddItemToCart } from "../../store/cartSlice";
+import { getCartItems } from "../../api/getCartItems";
 
 const NavBar = () => {
   const [isScreenSmall, setIsScreenSmall] = useState(window.innerWidth <= 930);
   const [activepath, setActivePath] = useState("Home");
   const dispatch = useDispatch();
   const path = useLocation();
+  const cart = useSelector((store) => store?.cart?.cartitems);
 
   const FetchUserDetails = async () => {
     const _id = localStorage.getItem("userid");

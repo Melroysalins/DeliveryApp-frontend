@@ -1,11 +1,13 @@
 import { BaseUrl } from "../constants";
 
-const OrderSaveFunction = async () => {
+const mergeCartItems = async ({ _id }) => {
   const userID = localStorage.getItem("userid");
   const data = {
+    _id,
     userID,
   };
-  const result = await fetch(`${BaseUrl}/user/ordersave`, {
+
+  const result = await fetch(`${BaseUrl}/user/mergecart`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -18,4 +20,4 @@ const OrderSaveFunction = async () => {
   return response;
 };
 
-export { OrderSaveFunction };
+export { mergeCartItems };

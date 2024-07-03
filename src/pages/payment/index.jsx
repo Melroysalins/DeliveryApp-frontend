@@ -8,14 +8,19 @@ import { useDispatch, useSelector } from "react-redux";
 import { OrderSaveFunction } from "../../api/orderSave";
 import { AddItemToCart } from "../../store/cartSlice";
 import { getCartItems } from "../../api/getCartItems";
+import { EstablishConnection } from "../../api/Connection";
 
 const PaymentPage = () => {
+  const [orders, setOrder] = useState();
+
   const dispatch = useDispatch();
 
   const FetchCartItems = async () => {
     const userID = localStorage.getItem("userid");
 
     const result = await getCartItems({ userID });
+
+    const storeID = "666ff693d7bcb064f9c1080b";
 
     if (result?.status === 200) {
       dispatch(AddItemToCart(result?.userCartItem[0]));

@@ -15,9 +15,14 @@ const PayNowButton = ({ amount }) => {
   const storeID = useSelector(
     (store) => store?.cart?.cartitems?.storeDetails[0]?.storeID
   );
+  const storeinfo = useSelector(
+    (store) => store?.cart?.cartitems?.storeDetails?.[0]
+  );
   const products = useSelector((store) => store?.cart?.cartitems?.products);
 
   const totalprice = useSelector((store) => store?.cart?.cartitems?.totalprice);
+
+  const userInfo = useSelector((store) => store?.user?.user);
 
   const handlePayNow = async () => {
     const userID = localStorage.getItem("userid");
@@ -40,6 +45,8 @@ const PayNowButton = ({ amount }) => {
         storeID: storeID,
         products: products,
         totalprice,
+        storeinfo,
+        userInfo,
       });
     }
   };

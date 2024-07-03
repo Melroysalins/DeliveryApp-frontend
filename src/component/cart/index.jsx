@@ -27,7 +27,7 @@ const Cart = () => {
   };
 
   useEffect(() => {
-    userloggedInfo && FetchCartItems();
+    FetchCartItems();
     selector ? setPresent(true) : setPresent(false);
   }, []);
   return (

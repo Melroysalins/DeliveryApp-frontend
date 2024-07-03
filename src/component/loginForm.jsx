@@ -5,6 +5,7 @@ import { RegisterUser } from "../api/registerUser";
 import { UserLogin } from "../api/userLogin";
 import { EmailandPhoneValidation } from "../utils/validations";
 import CustomizedSnackbars from "./snackBar";
+import { mergeCartItems } from "../api/mergeCart";
 
 export default function LoginForm({
   login,
@@ -58,6 +59,7 @@ export default function LoginForm({
       setOpen(true);
       setMessage(result?.message);
       setSeverity("success");
+      const _id = JSON.parse(localStorage.getItem("cart"));
       setTimeout(() => {
         !iscartPage && setIsDrawerOpen(false);
       }, 400);
@@ -65,6 +67,11 @@ export default function LoginForm({
       localStorage.setItem("isloggin", true);
       localStorage.setItem("useraddress", JSON.stringify(userAddress));
       setLoad(true);
+
+      const result2 = await mergeCartItems({ _id: _id?._id });
+
+      console.log("result22_> register--->", result2);
+
       window.location.reload();
     } else {
       setOpen(true);
@@ -93,6 +100,10 @@ export default function LoginForm({
       setSeverity("error");
     }
   };
+
+  const _id = JSON.parse(localStorage.getItem("cart"));
+
+  console.log("Cart Item from localstorage-->", _id);
 
   return (
     <Box
