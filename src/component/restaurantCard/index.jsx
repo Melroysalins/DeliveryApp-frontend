@@ -6,6 +6,10 @@ import RestaurantAddress from "../restaurantAddress";
 import Skeleton from "@mui/material/Skeleton";
 
 const RestaurantCard = ({ data }) => {
+  console.log(
+    "storename--->",
+    data?.storename + " offer---> " + typeof data?.offer
+  );
   return (
     <div className="RestaurantCardContainner">
       <div className="RestaurantCard">
@@ -13,7 +17,12 @@ const RestaurantCard = ({ data }) => {
           <img src={data?.file?.url} loading="lazy" />
           <div className="OverLayContainner">
             <p>
-              {data?.offer !== "null" ? "up to " + data?.offer + "% 0ff" : ""}
+              {data?.offer &&
+              data.offer !== "null" &&
+              data.offer !== "" &&
+              data.offer !== "0"
+                ? `up to ${data.offer}% off`
+                : ""}
             </p>
           </div>
         </div>
