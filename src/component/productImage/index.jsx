@@ -79,7 +79,7 @@ const ProductImage = ({ image, issearchpage, data }) => {
   return (
     <>
       <div className={!issearchpage ? "ProductImageDiv" : "searchPageIMageDiv"}>
-        <img src={image} loading="lazy" />
+        <img src={image} loading="lazy" fetchpriority="high" />
         <button className="AddProductButton" onClick={() => handleaddtoCart()}>
           ADD
         </button>

@@ -1,70 +1,28 @@
-# Getting Started with Create React App
+## Full Stack Admin Dashboard and Delivery App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Project Overview
+This project is a comprehensive full-stack application consisting of an Admin Dashboard and a Food Delivery App. It enables restaurant owners to manage their stores online and allows users to order food from nearby restaurants based on their location using Food Delivery app.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+1) Admin Dashboard
+Restaurant Registration: Restaurant owners can register their stores online.
+Store Information Management: Store owners can add store details such as store name, store logo, store banner, available offers, restaurant type (Veg, Non-Veg, Both), and store address (using OpenCage API).
+Image Optimization: Integrated with Sharp, Multer, and Cloudinary to optimize all uploaded images to less than 200KB.
+Store Status Management: Store owners can set their store to live or offline. Offline stores will not be displayed in the delivery app.
+Edit and Delete Store Information: Store owners can edit store details and product information and delete products that are no longer available.
+Food Delivery App
+User Authentication: Users can log in to the app.
+Location-Based Restaurant Display: Users can add their location (using OpenCage API), and the app displays restaurants near the user's location.
+Restaurant Filtering: Users can filter restaurants based on type (Veg, Non-Veg), and delivery time.
+Performance Optimization: Implemented lazy loading to improve website performance and debouncing in search functionality to reduce API calls.
+Add to Cart and Concurrency Handling: Implemented a lock mechanism to handle concurrency when multiple users try to order a product with limited quantity. The product is locked for 10 minutes until the payment is completed.
+Payment Integration: Integrated Razorpay for payment processing.
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Technologies Used
+Frontend: React.js, Next.js, Material UI, Tailwind CSS, TypeScript
+Backend: Node.js, Express, MongoDB
+APIs: OpenCage API for address and location fetching
+Image Management: Sharp, Multer, Cloudinary
+Payment Gateway: Razorpay
+Miscellaneous: Lazy loading, Debouncing
