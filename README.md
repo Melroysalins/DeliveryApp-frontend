@@ -31,8 +31,23 @@ Payment Integration: Integrated Razorpay for payment processing.
 
 ## Technologies Used
 Frontend: React.js, Next.js, Material UI, Tailwind CSS, TypeScript
+
 Backend: Node.js, Express, MongoDB
+
+
 APIs: OpenCage API for address and location fetching
+
 Image Management: Sharp, Multer, Cloudinary
+
 Payment Gateway: Razorpay
+
 Miscellaneous: Lazy loading, Debouncing
+
+
+## [Delivery App Backend Link] --->(https://github.com/Melroysalins/DeliveryApp-Backend) 
+
+## [AdminDashboard Frontend Link] ----> (https://github.com/Melroysalins/Admin-dashboard-frontend)
+
+## [AdminDashboard Backend Link] ---->(https://github.com/Melroysalins/Admin-Dashboard-Backend)
+
+
